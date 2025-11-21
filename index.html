@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LLM → MermaidJS Diagram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: 100vh;
+    }
+    header {
+      padding: 12px 16px;
+      border-bottom: 1px solid #ccc;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(320px, 480px) 1fr;
+      gap: 16px;
+      padding: 16px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 8px;
+      padding: 8px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .output {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px;
+      overflow: auto;
+    }
+    .error {
+      color: #b00020;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LLM → MermaidJS Diagram</h1>
+    <p>Type a prompt, send to backend, edit Mermaid code, render diagram.</p>
+  </header>
+
+  <main>
+    <section>
+      <label for="prompt"><strong>Prompt to LLM:</strong></label>
+      <textarea id="prompt" placeholder="Describe the diagram you want..."></textarea>
+      <button id="sendBtn">Send to LLM</button>
+
+      <label for="code" style="margin-top:12px;display:block;"><strong>Mermaid code (editable):</strong></label>
+      <textarea id="code"></textarea>
+      <button id="renderBtn">Render diagram</button>
+    </section>
+
+    <section>
+      <label><strong>Output:</strong></label>
+      <div id="output" class="output"></div>
+    </section>
+  </main>
+
+  <!-- MermaidJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <script>
+    mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' });
+
+    const promptEl = document.getElementById('prompt');
+    const codeEl = document.getElementById('code');
+    const outputEl = document.getElementById('output');
+    const sendBtn = document.getElementById('sendBtn');
+    const renderBtn = document.getElementById('renderBtn');
+
+    async function sendToLLM() {
+      const prompt = promptEl.value.trim();
+      if (!prompt) return;
+
+      try {
+        const res = await fetch('http://localhost:5000/api', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt })
+        });
+        if (!res.ok) throw new Error('Backend error: ' + res.status);
+        const data = await res.json();
+
+        if (data.mermaid) {
+          codeEl.value = data.mermaid;
+          renderDiagram();
+        } else {
+          outputEl.innerHTML = '<div class="error">No Mermaid code in response</div>';
+        }
+      } catch (err) {
+        outputEl.innerHTML = '<div class="error">Error: ' + err.message + '</div>';
+      }
+    }
+
+    async function renderDiagram() {
+      const code = codeEl.value.trim();
+      if (!code) return;
+      try {
+        await mermaid.parse(code);
+        const { svg } = await mermaid.render('diagram', code);
+        outputEl.innerHTML = svg;
+      } catch (err) {
+        outputEl.innerHTML = '<div class="error">Mermaid error:\n' + err.message + '</div>';
+      }
+    }
+
+    sendBtn.addEventListener('click', sendToLLM);
+    renderBtn.addEventListener('click', renderDiagram);
+  </script>
+</body>
+</html>

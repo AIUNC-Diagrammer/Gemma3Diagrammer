@@ -1,0 +1,1184 @@
+[
+  {
+    "prompt": "Create a class diagram with User and Account.",
+    "diagram": "classDiagram\n    class User {\n        +name: string\n        +email: string\n    }\n    class Account {\n        +id: int\n        +balance: float\n    }\n    User --> Account"
+  },
+  {
+    "prompt": "Make a class diagram with Car and Engine.",
+    "diagram": "classDiagram\n    class Car {\n        +model: string\n        +year: int\n    }\n    class Engine {\n        +horsepower: int\n    }\n    Car --> Engine"
+  },
+  {
+    "prompt": "Diagram with Teacher and Student where a teacher has many students.",
+    "diagram": "classDiagram\n    class Teacher {\n        +id: int\n        +name: string\n    }\n    class Student {\n        +id: int\n        +name: string\n    }\n    Teacher \"1\" --> \"many\" Student"
+  },
+  {
+    "prompt": "Make a state diagram for a traffic light.",
+    "diagram": "stateDiagram\n    Red --> Green\n    Green --> Yellow\n    Yellow --> Red"
+  },
+  {
+    "prompt": "Sequence diagram of a user logging in.",
+    "diagram": "sequenceDiagram\n    User ->> System: Enter credentials\n    System ->> User: Validate login\n    User ->> System: Access granted"
+  },
+  {
+    "prompt": "Class diagram for a Book and Author.",
+    "diagram": "classDiagram\n    class Book {\n        +title: string\n    }\n    class Author {\n        +name: string\n    }\n    Author --> Book"
+  },
+  {
+    "prompt": "Activity diagram for ordering products online.",
+    "diagram": "flowchart TD\n    A[Browse] --> B[Add to cart]\n    B --> C[Checkout]\n    C --> D[Payment successful]"
+  },
+  {
+    "prompt": "Sequence diagram for ordering food at a restaurant.",
+    "diagram": "sequenceDiagram\n    Customer ->> Restaurant: Order food\n    Restaurant ->> Kitchen: Prepare meal\n    Kitchen ->> Restaurant: Meal ready\n    Restaurant ->> Customer: Serve meal"
+  },
+  {
+    "prompt": "Class diagram of Person and Address.",
+    "diagram": "classDiagram\n    class Person {\n        +name: string\n    }\n    class Address {\n        +street: string\n        +city: string\n    }\n    Person --> Address"
+  },
+  {
+    "prompt": "State diagram for a door.",
+    "diagram": "stateDiagram\n    Closed --> Open\n    Open --> Closed"
+  },
+  {
+    "prompt": "ER diagram for a library with Books, Members, and Loans.",
+    "diagram": "erDiagram\n    BOOK {\n        int id\n        string title\n    }\n    MEMBER {\n        int id\n        string name\n    }\n    LOAN {\n        int id\n        date dateOut\n    }\n    MEMBER ||--o{ LOAN : makes\n    BOOK ||--o{ LOAN : borrowed_by"
+  },
+  {
+    "prompt": "Class diagram for a Bank with Branch and Manager.",
+    "diagram": "classDiagram\n    class Bank {\n        +name: string\n    }\n    class Branch {\n        +location: string\n    }\n    class Manager {\n        +name: string\n    }\n    Bank --> Branch\n    Branch --> Manager"
+  },
+  {
+    "prompt": "Flowchart of a login process.",
+    "diagram": "flowchart TD\n    A[Start] --> B[Enter credentials]\n    B --> C{Valid?}\n    C -->|Yes| D[Login success]\n    C -->|No| E[Retry]"
+  },
+  {
+    "prompt": "State diagram for document lifecycle.",
+    "diagram": "stateDiagram\n    Draft --> Review\n    Review --> Approved\n    Review --> Rejected\n    Rejected --> Draft"
+  },
+  {
+    "prompt": "Class diagram for Employee, Department, and Project.",
+    "diagram": "classDiagram\n    class Employee {\n        +id: int\n        +name: string\n    }\n    class Department {\n        +name: string\n    }\n    class Project {\n        +code: string\n    }\n    Department --> Employee\n    Employee --> Project"
+  },
+  {
+    "prompt": "Sequence diagram for an online purchase.",
+    "diagram": "sequenceDiagram\n    Customer ->> Website: Add item\n    Website ->> PaymentGateway: Pay\n    PaymentGateway -->> Website: Confirm\n    Website ->> Customer: Order complete"
+  },
+  {
+    "prompt": "ER diagram for customers, orders, and products.",
+    "diagram": "erDiagram\n    CUSTOMER ||--o{ ORDER : places\n    ORDER ||--o{ ITEM : contains\n    PRODUCT ||--o{ ITEM : listed_in"
+  },
+  {
+    "prompt": "Class diagram for School, Class, and Student.",
+    "diagram": "classDiagram\n    class School {\n        +name: string\n    }\n    class Class {\n        +level: int\n    }\n    class Student {\n        +name: string\n    }\n    School --> Class\n    Class --> Student"
+  },
+  {
+    "prompt": "State diagram for a printer.",
+    "diagram": "stateDiagram\n    Idle --> Printing\n    Printing --> Error\n    Error --> Idle\n    Printing --> Idle"
+  },
+  {
+    "prompt": "Sequence diagram for booking a flight.",
+    "diagram": "sequenceDiagram\n    User ->> Website: Search flights\n    Website ->> Server: Query database\n    Server -->> Website: Results\n    Website ->> User: Display flights"
+  },
+  {
+    "prompt": "Class diagram for an RPG game involving Player, Weapon, and Enemy.",
+    "diagram": "classDiagram\n    class Player {\n        +level: int\n        +attack()\n    }\n    class Weapon {\n        +damage: int\n    }\n    class Enemy {\n        +hp: int\n    }\n    Player --> Weapon\n    Player --> Enemy"
+  },
+  {
+    "prompt": "Flowchart of an ATM cash withdrawal.",
+    "diagram": "flowchart TD\n    A[Insert card] --> B[Enter PIN]\n    B --> C{Valid PIN?}\n    C -->|No| A\n    C -->|Yes| D[Enter amount]\n    D --> E[Dispense cash]"
+  },
+  {
+    "prompt": "ER diagram for Student, Classes, and Exams.",
+    "diagram": "erDiagram\n    STUDENT ||--o{ ENROLLMENT : has\n    CLASS ||--o{ ENROLLMENT : offers\n    CLASS ||--o{ EXAM : schedules"
+  },
+  {
+    "prompt": "Class diagram for Animal, Dog, and Cat inheritance.",
+    "diagram": "classDiagram\n    class Animal {\n        +age: int\n        +eat()\n    }\n    class Dog\n    class Cat\n    Animal <|-- Dog\n    Animal <|-- Cat"
+  },
+  {
+    "prompt": "Sequence diagram for sending an email.",
+    "diagram": "sequenceDiagram\n    User ->> MailClient: Compose\n    MailClient ->> SMTPServer: Send email\n    SMTPServer ->> Mailbox: Store message\n    Mailbox -->> SMTPServer: OK"
+  },
+  {
+    "prompt": "State diagram for a vending machine.",
+    "diagram": "stateDiagram\n    Idle --> WaitingForMoney\n    WaitingForMoney --> Dispensing\n    Dispensing --> Idle"
+  },
+  {
+    "prompt": "Class diagram for Blog, Post, Comment, and User.",
+    "diagram": "classDiagram\n    class Blog {\n        +title: string\n    }\n    class Post {\n        +content: string\n    }\n    class Comment {\n        +message: string\n    }\n    class User {\n        +name: string\n    }\n    Blog --> Post\n    Post --> Comment\n    User --> Comment"
+  },
+  {
+    "prompt": "Flowchart of recipe steps.",
+    "diagram": "flowchart TD\n    A[Start] --> B[Gather ingredients]\n    B --> C[Cook]\n    C --> D[Serve]"
+  },
+  {
+    "prompt": "Sequence diagram for crypto wallet transaction.",
+    "diagram": "sequenceDiagram\n    User ->> Wallet: Create transaction\n    Wallet ->> Blockchain: Broadcast\n    Blockchain -->> Wallet: Confirm\n    Wallet ->> User: Completed"
+  },
+  {
+    "prompt": "ER diagram for music streaming: Artist, Album, Track, User, Playlist.",
+    "diagram": "erDiagram\n    ARTIST ||--o{ ALBUM : creates\n    ALBUM ||--o{ TRACK : contains\n    USER ||--o{ PLAYLIST : owns\n    PLAYLIST ||--o{ TRACK : includes"
+  },
+  {
+    "prompt": "Class diagram for Vehicle, Motorcycle, and Car.",
+    "diagram": "classDiagram\n    class Vehicle {\n        +speed: int\n    }\n    class Motorcycle\n    class Car\n    Vehicle <|-- Motorcycle\n    Vehicle <|-- Car"
+  },
+  {
+    "prompt": "State diagram for phone call states.",
+    "diagram": "stateDiagram\n    Idle --> Dialing\n    Dialing --> Connected\n    Connected --> Ended\n    Ended --> Idle"
+  },
+  {
+    "prompt": "Flowchart for online support ticket resolution.",
+    "diagram": "flowchart TD\n    A[Submit ticket] --> B[Assign agent]\n    B --> C{Resolved?}\n    C -->|Yes| D[Close ticket]\n    C -->|No| B"
+  },
+  {
+    "prompt": "Sequence diagram for multiplayer game match setup.",
+    "diagram": "sequenceDiagram\n    Player ->> LobbyServer: Join\n    LobbyServer ->> Matchmaker: Queue\n    Matchmaker ->> LobbyServer: Match found\n    LobbyServer ->> Player: Start game"
+  },
+  {
+    "prompt": "Class diagram for Restaurant, Menu, Dish, Chef, and Customer.",
+    "diagram": "classDiagram\n    class Restaurant {\n        +name: string\n    }\n    class Menu {\n        +title: string\n    }\n    class Dish {\n        +price: float\n    }\n    class Chef\n    class Customer\n    Restaurant --> Menu\n    Menu --> Dish\n    Chef --> Dish\n    Customer --> Dish"
+  },
+  {
+    "prompt": "ER diagram for hotel booking system.",
+    "diagram": "erDiagram\n    HOTEL ||--o{ ROOM : has\n    CUSTOMER ||--o{ BOOKING : places\n    ROOM ||--o{ BOOKING : reserved_for"
+  },
+  {
+    "prompt": "Flowchart for gym membership signup.",
+    "diagram": "flowchart TD\n    A[Start] --> B[Enter info]\n    B --> C[Choose plan]\n    C --> D[Payment]\n    D --> E[Account created]"
+  },
+  {
+    "prompt": "State diagram for project management tasks.",
+    "diagram": "stateDiagram\n    Todo --> InProgress\n    InProgress --> Review\n    Review --> Done\n    Review --> InProgress"
+  },
+  {
+    "prompt": "Sequence diagram for purchasing movie tickets online.",
+    "diagram": "sequenceDiagram\n    User ->> Website: Select movie\n    Website ->> Server: Check availability\n    Server -->> Website: Seats OK\n    Website ->> PaymentGateway: Pay"
+  },
+  {
+    "prompt": "Class diagram for Invoice, Customer, Payment, and Item.",
+    "diagram": "classDiagram\n    class Invoice {\n        +id: int\n        +date: Date\n    }\n    class Item {\n        +name: string\n    }\n    class Customer {\n        +name: string\n    }\n    class Payment {\n        +amount: float\n    }\n    Invoice --> Item\n    Invoice --> Payment\n    Customer --> Invoice"
+  },
+  {
+    "prompt": "ER diagram for Plants, Species, and Gardens.",
+    "diagram": "erDiagram\n    SPECIES ||--o{ PLANT : classified_as\n    GARDEN ||--o{ PLANT : contains"
+  },
+  {
+    "prompt": "Flowchart for customer support escalation.",
+    "diagram": "flowchart TD\n    A[Receive request] --> B[Level 1 support]\n    B --> C{Resolved?}\n    C -->|Yes| D[Close]\n    C -->|No| E[Level 2 support]"
+  },
+  {
+    "prompt": "Sequence diagram for online learning platform login.",
+    "diagram": "sequenceDiagram\n    Student ->> Platform: Login\n    Platform ->> AuthServer: Validate\n    AuthServer -->> Platform: OK\n    Platform ->> Student: Dashboard"
+  },
+  {
+    "prompt": "Class diagram for Zoo, Enclosure, Animal, and Zookeeper.",
+    "diagram": "classDiagram\n    class Zoo\n    class Enclosure\n    class Animal\n    class Zookeeper\n    Zoo --> Enclosure\n    Enclosure --> Animal\n    Zookeeper --> Animal"
+  },
+  {
+    "prompt": "State diagram for order processing lifecycle.",
+    "diagram": "stateDiagram\n    Received --> Processing\n    Processing --> Shipped\n    Shipped --> Delivered\n    Delivered --> Closed"
+  },
+  {
+    "prompt": "Flowchart for user password reset.",
+    "diagram": "flowchart TD\n    A[Start] --> B[Enter email]\n    B --> C[Send reset link]\n    C --> D[Update password]\n    D --> E[Complete]"
+  },
+  {
+    "prompt": "Sequence diagram for messaging between two users.",
+    "diagram": "sequenceDiagram\n    UserA ->> Server: Send message\n    Server ->> UserB: Deliver\n    UserB ->> Server: Read receipt\n    Server ->> UserA: Delivered status"
+  },
+  {
+    "prompt": "Class diagram for CMS with Page, Author, Tag, and Category.",
+    "diagram": "classDiagram\n    class Page\n    class Author\n    class Tag\n    class Category\n    Author --> Page\n    Page --> Tag\n    Page --> Category"
+  },
+  {
+    "prompt": "Create a full class diagram for a hospital management system including Hospital, Department, Doctor, Nurse, Patient, Appointment, Treatment, Invoice, Room, and MedicalRecord with associations and key attributes.",
+    "diagram": "classDiagram\n    class Hospital { +name: string +location: string }\n    class Department { +name: string }\n    class Doctor { +id: int +name: string +specialization: string }\n    class Nurse { +id: int +name: string }\n    class Patient { +id: int +name: string +age: int }\n    class Appointment { +date: Date +purpose: string }\n    class Treatment { +id: int +details: string }\n    class Invoice { +invoiceId: int +amount: float }\n    class Room { +roomNumber: int +type: string }\n    class MedicalRecord { +recordId: int +diagnosis: string }\n    Hospital --> Department\n    Department --> Doctor\n    Department --> Nurse\n    Patient --> Appointment\n    Appointment --> Doctor\n    Appointment --> MedicalRecord\n    MedicalRecord --> Treatment\n    Patient --> Invoice\n    Patient --> Room"
+  },
+  {
+    "prompt": "Generate a complex sequence diagram showing a user purchasing software online, including User, WebApp, LicenseServer, PaymentGateway, EmailServer, and Database.",
+    "diagram": "sequenceDiagram\n    participant User\n    participant WebApp\n    participant LicenseServer\n    participant PaymentGateway\n    participant EmailServer\n    participant DB\n    User ->> WebApp: Select software\n    WebApp ->> DB: Fetch details\n    DB -->> WebApp: Details\n    User ->> WebApp: Checkout\n    WebApp ->> PaymentGateway: Process payment\n    PaymentGateway -->> WebApp: Payment success\n    WebApp ->> LicenseServer: Generate license\n    LicenseServer -->> WebApp: License key\n    WebApp ->> EmailServer: Send activation email\n    EmailServer -->> User: Email delivered"
+  },
+  {
+    "prompt": "Build a state diagram for an autonomous drone delivery system including states: Idle, Takeoff, Navigating, Delivering, Returning, EmergencyMode, and Charging.",
+    "diagram": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> Takeoff\n    Takeoff --> Navigating\n    Navigating --> Delivering\n    Delivering --> Returning\n    Returning --> Charging\n    Charging --> Idle\n    Navigating --> EmergencyMode\n    Delivering --> EmergencyMode\n    Returning --> EmergencyMode\n    EmergencyMode --> Idle"
+  },
+  {
+    "prompt": "Create an ER diagram for a complex university system including Students, Courses, Professors, Departments, Majors, Enrollment, Exams, ExamResults, Rooms, Schedules.",
+    "diagram": "erDiagram\n    STUDENT ||--o{ ENROLLMENT : registers\n    COURSE ||--o{ ENROLLMENT : offers\n    PROFESSOR ||--o{ COURSE : teaches\n    DEPARTMENT ||--o{ PROFESSOR : employs\n    DEPARTMENT ||--o{ MAJOR : offers\n    STUDENT ||--o{ MAJOR : selects\n    COURSE ||--o{ EXAM : schedules\n    EXAM ||--o{ EXAMRESULT : graded_by\n    STUDENT ||--o{ EXAMRESULT : receives\n    ROOM ||--o{ SCHEDULE : used_for\n    COURSE ||--o{ SCHEDULE : has"
+  },
+  {
+    "prompt": "Make a complex class diagram for an airline system including Airline, Aircraft, Airport, Flight, CrewMember, Pilot, Passenger, Reservation, Ticket, BoardingPass, and Baggage.",
+    "diagram": "classDiagram\n    class Airline { +name: string }\n    class Aircraft { +model: string +capacity: int }\n    class Airport { +code: string +name: string }\n    class Flight { +flightNumber: string +departure: Date +arrival: Date }\n    class CrewMember { +id: int +name: string }\n    class Pilot\n    class Passenger { +id: int +name: string }\n    class Reservation { +resId: int }\n    class Ticket { +ticketId: int +price: float }\n    class BoardingPass { +boardingId: int }\n    class Baggage { +tag: string +weight: float }\n    Airline --> Flight\n    Flight --> Aircraft\n    Flight --> Airport\n    CrewMember <|-- Pilot\n    Flight --> CrewMember\n    Passenger --> Reservation\n    Reservation --> Ticket\n    Ticket --> BoardingPass\n    Passenger --> Baggage"
+  },
+  {
+    "prompt": "Sequence diagram for a CI/CD pipeline including Developer, GitServer, BuildServer, TestServer, DeployServer, NotificationService.",
+    "diagram": "sequenceDiagram\n    Developer ->> GitServer: Push code\n    GitServer ->> BuildServer: Trigger build\n    BuildServer ->> TestServer: Run tests\n    TestServer -->> BuildServer: Test results\n    BuildServer ->> DeployServer: Deploy if success\n    DeployServer -->> NotificationService: Send deployment status\n    NotificationService -->> Developer: Status notification"
+  },
+  {
+    "prompt": "State diagram for a complex hotel reservation workflow including New, QuoteGenerated, AwaitingDeposit, Confirmed, CheckedIn, CheckedOut, Canceled, NoShow.",
+    "diagram": "stateDiagram-v2\n    [*] --> New\n    New --> QuoteGenerated\n    QuoteGenerated --> AwaitingDeposit\n    AwaitingDeposit --> Confirmed\n    Confirmed --> CheckedIn\n    CheckedIn --> CheckedOut\n    AwaitingDeposit --> Canceled\n    Confirmed --> NoShow\n    Canceled --> [*]\n    CheckedOut --> [*]\n    NoShow --> [*]"
+  },
+  {
+    "prompt": "Create an ER diagram for retail analytics including Product, Supplier, Category, Warehouse, Stock, Store, SalesTransaction, LineItem, Customer, Discount, LoyaltyProgram.",
+    "diagram": "erDiagram\n    SUPPLIER ||--o{ PRODUCT : provides\n    CATEGORY ||--o{ PRODUCT : groups\n    PRODUCT ||--o{ STOCK : stored_in\n    WAREHOUSE ||--o{ STOCK : contains\n    STORE ||--o{ SALESTRANSACTION : performs\n    SALESTRANSACTION ||--o{ LINEITEM : includes\n    PRODUCT ||--o{ LINEITEM : purchased_as\n    CUSTOMER ||--o{ SALESTRANSACTION : purchases\n    LOYALTYPROGRAM ||--o{ CUSTOMER : linked_to\n    DISCOUNT ||--o{ LINEITEM : applied"
+  },
+  {
+    "prompt": "Class diagram for a blockchain system including Blockchain, Block, Transaction, Wallet, Miner, SmartContract, Node, ConsensusEngine, NetworkMessage.",
+    "diagram": "classDiagram\n    class Blockchain { +chainId: string }\n    class Block { +index: int +timestamp: Date }\n    class Transaction { +txId: string +amount: float }\n    class Wallet { +address: string }\n    class Miner\n    class SmartContract { +contractId: string }\n    class Node { +nodeId: string }\n    class ConsensusEngine { +algorithm: string }\n    class NetworkMessage { +id: string }\n    Blockchain --> Block\n    Block --> Transaction\n    Wallet --> Transaction\n    Node --> ConsensusEngine\n    Node --> NetworkMessage\n    Miner --> Block\n    SmartContract --> Transaction"
+  },
+  {
+    "prompt": "Sequence diagram for online multiplayer match with Client, MatchServer, AuthServer, RankingServer, Database, GameEngine.",
+    "diagram": "sequenceDiagram\n    Client ->> AuthServer: Login\n    AuthServer ->> Database: Validate\n    Database -->> AuthServer: Valid\n    AuthServer ->> Client: Login success\n    Client ->> MatchServer: Queue for match\n    MatchServer ->> RankingServer: Fetch MMR\n    RankingServer -->> MatchServer: MMR returned\n    MatchServer ->> Client: Assign match\n    Client ->> GameEngine: Start session"
+  },
+  {
+    "prompt": "State diagram for an autonomous vehicle driving system with states: Startup, Idle, Navigating, AvoidingObstacle, FollowingLane, Parking, ManualOverride, EmergencyStop.",
+    "diagram": "stateDiagram-v2\n    [*] --> Startup\n    Startup --> Idle\n    Idle --> Navigating\n    Navigating --> FollowingLane\n    Navigating --> AvoidingObstacle\n    AvoidingObstacle --> Navigating\n    Navigating --> Parking\n    Navigating --> ManualOverride\n    Navigating --> EmergencyStop\n    EmergencyStop --> Idle"
+  },
+  {
+    "prompt": "ER diagram for a healthcare insurance system with PolicyHolder, Policy, Claim, Hospital, Diagnosis, Procedure, Invoice, CoveragePlan.",
+    "diagram": "erDiagram\n    POLICYHOLDER ||--o{ POLICY : owns\n    POLICY ||--o{ CLAIM : files\n    CLAIM ||--o{ PROCEDURE : involves\n    PROCEDURE ||--o{ DIAGNOSIS : results_in\n    HOSPITAL ||--o{ PROCEDURE : performs\n    CLAIM ||--o{ INVOICE : billed_by\n    COVERAGEPLAN ||--o{ POLICY : defines"
+  },
+  {
+    "prompt": "Complex class diagram of a music production software including Project, Track, AudioClip, MIDIClip, Effect, MixerChannel, AutomationLane, Instrument, ExportSettings.",
+    "diagram": "classDiagram\n    class Project { +name: string }\n    class Track { +trackName: string }\n    class AudioClip { +filePath: string }\n    class MIDIClip { +notes: int }\n    class Effect { +type: string }\n    class MixerChannel { +level: float }\n    class AutomationLane { +parameter: string }\n    class Instrument { +instrumentName: string }\n    class ExportSettings { +format: string }\n    Project --> Track\n    Track --> AudioClip\n    Track --> MIDIClip\n    Track --> MixerChannel\n    MixerChannel --> Effect\n    Track --> AutomationLane\n    Instrument --> MIDIClip\n    Project --> ExportSettings"
+  },
+  {
+    "prompt": "Sequence diagram for cloud infrastructure provisioning using User, IaC Tool, Orchestrator, VM Provisioning Service, Storage Service, LoadBalancer, Monitoring Service.",
+    "diagram": "sequenceDiagram\n    User ->> IaCTool: Deploy configuration\n    IaCTool ->> Orchestrator: Parse and execute\n    Orchestrator ->> VMService: Create VM\n    VMService -->> Orchestrator: VM created\n    Orchestrator ->> StorageService: Allocate storage\n    StorageService -->> Orchestrator: Storage ready\n    Orchestrator ->> LoadBalancer: Register VM\n    LoadBalancer -->> Orchestrator: OK\n    Orchestrator ->> MonitoringService: Register VM metrics\n    MonitoringService -->> Orchestrator: OK\n    Orchestrator -->> User: Deployment successful"
+  },
+  {
+    "prompt": "State diagram for a bank ATM with CardInserted, PINEntry, AccountSelection, Processing, DispensingCash, PrintingReceipt, OutOfService.",
+    "diagram": "stateDiagram-v2\n    [*] --> CardInserted\n    CardInserted --> PINEntry\n    PINEntry --> AccountSelection\n    AccountSelection --> Processing\n    Processing --> DispensingCash\n    DispensingCash --> PrintingReceipt\n    PrintingReceipt --> CardInserted\n    Processing --> OutOfService"
+  },
+  {
+    "prompt": "ER diagram for logistics system including Shipment, Package, Item, TransportVehicle, Driver, Route, Warehouse, DeliveryStop.",
+    "diagram": "erDiagram\n    SHIPMENT ||--o{ PACKAGE : contains\n    PACKAGE ||--o{ ITEM : includes\n    SHIPMENT ||--o{ ROUTE : assigned\n    ROUTE ||--o{ DELIVERYSTOP : includes\n    TRANSPORTVEHICLE ||--o{ ROUTE : used_for\n    DRIVER ||--o{ TRANSPORTVEHICLE : operates\n    WAREHOUSE ||--o{ SHIPMENT : dispatches"
+  },
+  {
+    "prompt": "Class diagram for SaaS CRM including Organization, User, SalesLead, Opportunity, Task, ActivityLog, EmailIntegration, Dashboard, PermissionRule.",
+    "diagram": "classDiagram\n    class Organization { +name: string }\n    class User { +username: string }\n    class SalesLead { +leadId: int }\n    class Opportunity { +value: float }\n    class Task { +description: string }\n    class ActivityLog { +timestamp: Date }\n    class EmailIntegration { +apiKey: string }\n    class Dashboard { +layout: string }\n    class PermissionRule { +role: string }\n    Organization --> User\n    User --> SalesLead\n    SalesLead --> Opportunity\n    User --> Task\n    Task --> ActivityLog\n    EmailIntegration --> ActivityLog\n    Dashboard --> ActivityLog\n    User --> PermissionRule"
+  },
+  {
+    "prompt": "Sequence diagram for a machine learning pipeline including DataEngineer, Scheduler, DataLake, ETLJob, MLTrainingService, ModelRegistry, ReportService.",
+    "diagram": "sequenceDiagram\n    DataEngineer ->> Scheduler: Submit job\n    Scheduler ->> ETLJob: Trigger run\n    ETLJob ->> DataLake: Read raw data\n    ETLJob ->> DataLake: Write cleaned data\n    Scheduler ->> MLTrainingService: Kick off training\n    MLTrainingService ->> DataLake: Load processed data\n    MLTrainingService ->> ModelRegistry: Register trained model\n    ModelRegistry -->> Scheduler: Model stored\n    Scheduler ->> ReportService: Generate training report"
+  },
+  {
+    "prompt": "State diagram for an IoT smart irrigation system with states: Idle, MeasuringSoil, EvaluatingMoisture, Irrigating, SendingReport, Error, Offline.",
+    "diagram": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> MeasuringSoil\n    MeasuringSoil --> EvaluatingMoisture\n    EvaluatingMoisture --> Irrigating\n    Irrigating --> SendingReport\n    SendingReport --> Idle\n    EvaluatingMoisture --> Error\n    Error --> Offline\n    Offline --> Idle"
+  },
+  {
+    "prompt": "ER diagram for a movie streaming service including User, SubscriptionPlan, Movie, Series, Season, Episode, Rating, Device, WatchHistory.",
+    "diagram": "erDiagram\n    USER ||--o{ SUBSCRIPTIONPLAN : subscribes\n    USER ||--o{ DEVICE : registers\n    USER ||--o{ WATCHHISTORY : has\n    MOVIE ||--o{ RATING : receives\n    SERIES ||--o{ SEASON : contains\n    SEASON ||--o{ EPISODE : includes\n    EPISODE ||--o{ RATING : receives"
+  },
+  {
+    "prompt": "Class diagram for a ride-sharing system including Driver, Passenger, Vehicle, Trip, Route, Payment, Rating, City, Dispatcher.",
+    "diagram": "classDiagram\n    class Driver { +id: int +name: string }\n    class Passenger { +id: int +name: string }\n    class Vehicle { +licensePlate: string }\n    class Trip { +tripId: int +distance: float }\n    class Route { +path: string }\n    class Payment { +amount: float }\n    class Rating { +score: int }\n    class City { +name: string }\n    class Dispatcher { +dispatchId: int }\n    Driver --> Vehicle\n    Driver --> Trip\n    Passenger --> Trip\n    Trip --> Route\n    Trip --> Payment\n    Passenger --> Rating\n    City --> Dispatcher"
+  },
+  {
+    "prompt": "Sequence diagram for high-frequency trading including TraderBot, MarketDataFeed, OrderManager, RiskChecker, Exchange, PortfolioDatabase, AnalyticsEngine.",
+    "diagram": "sequenceDiagram\n    MarketDataFeed ->> TraderBot: Market update\n    TraderBot ->> RiskChecker: Validate trade\n    RiskChecker -->> TraderBot: OK\n    TraderBot ->> OrderManager: Submit order\n    OrderManager ->> Exchange: Execute trade\n    Exchange -->> OrderManager: Trade result\n    OrderManager ->> PortfolioDB: Update holdings\n    OrderManager ->> AnalyticsEngine: Log analytics"
+  },
+  {
+    "prompt": "State diagram for smart factory production line including Idle, MaterialLoading, Processing, QualityCheck, Packaging, Rejecting, Maintenance, Shutdown.",
+    "diagram": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> MaterialLoading\n    MaterialLoading --> Processing\n    Processing --> QualityCheck\n    QualityCheck --> Packaging\n    QualityCheck --> Rejecting\n    Packaging --> Idle\n    Rejecting --> Idle\n    Processing --> Maintenance\n    Maintenance --> Shutdown"
+  },
+  {
+    "prompt": "Create a detailed class diagram for a hotel reservation system including classes Hotel, Room, Customer, Reservation, Payment, Service, Invoice, and Staff. Include attributes, methods, and specify all cardinalities and associations.",
+    "diagram": "classDiagram\n    class Hotel {\n        +id: int\n        +name: string\n        +location: string\n        +getAvailableRooms()\n    }\n    class Room {\n        +roomId: int\n        +number: string\n        +type: string\n        +isAvailable(): bool\n    }\n    class Customer {\n        +customerId: int\n        +name: string\n        +email: string\n        +register()\n    }\n    class Reservation {\n        +reservationId: int\n        +startDate: Date\n        +endDate: Date\n        +confirm()\n    }\n    class Payment {\n        +paymentId: int\n        +amount: float\n        +process()\n    }\n    class Service {\n        +serviceId: int\n        +type: string\n        +charge: float\n    }\n    class Invoice {\n        +invoiceId: int\n        +generatePDF()\n    }\n    class Staff {\n        +staffId: int\n        +name: string\n        +role: string\n    }\n    Hotel --> \"many\" Room\n    Customer --> \"many\" Reservation\n    Reservation --> Room\n    Reservation --> Payment\n    Reservation --> \"many\" Service\n    Reservation --> Invoice\n    Hotel --> \"many\" Staff"
+  },
+  {
+    "prompt": "Generate a sequence diagram of a food delivery ordering workflow including Customer, MobileApp, DeliveryService, Restaurant, Kitchen, and PaymentGateway. Show authentication, order submission, preparation, assignment of delivery driver, and payment confirmation.",
+    "diagram": "sequenceDiagram\n    participant Customer\n    participant MobileApp\n    participant DeliveryService\n    participant Restaurant\n    participant Kitchen\n    participant PaymentGateway\n\n    Customer ->> MobileApp: Login credentials\n    MobileApp ->> DeliveryService: Authenticate user\n    DeliveryService ->> MobileApp: Auth OK\n\n    Customer ->> MobileApp: Browse menu and place order\n    MobileApp ->> DeliveryService: Submit order\n    DeliveryService ->> Restaurant: Send order details\n    Restaurant ->> Kitchen: Prepare food\n    Kitchen ->> Restaurant: Order ready\n\n    DeliveryService ->> PaymentGateway: Process payment\n    PaymentGateway -->> DeliveryService: Payment complete\n\n    DeliveryService ->> Customer: Assign delivery driver"
+  },
+  {
+    "prompt": "Create a highly detailed state diagram for a cloud-based distributed computation job including states New, AwaitingResources, Running, ScalingUp, ScalingDown, Paused, Failed, Completed, and Archiving.",
+    "diagram": "stateDiagram-v2\n    [*] --> New\n    New --> AwaitingResources\n    AwaitingResources --> Running\n    Running --> ScalingUp\n    Running --> ScalingDown\n    Running --> Paused\n    Running --> Failed\n    ScalingUp --> Running\n    ScalingDown --> Running\n    Paused --> Running\n    Running --> Completed\n    Completed --> Archiving\n    Failed --> [*]\n    Archiving --> [*]"
+  },
+  {
+    "prompt": "Generate an ER diagram for a large digital library with entities Book, Author, Category, Publisher, Copy, User, Loan, Fine, and Review. Include primary keys and cardinalities.",
+    "diagram": "erDiagram\n    BOOK {\n        int book_id\n        string title\n        string isbn\n    }\n    AUTHOR {\n        int author_id\n        string name\n    }\n    CATEGORY {\n        int cat_id\n        string name\n    }\n    PUBLISHER {\n        int pub_id\n        string name\n    }\n    COPY {\n        int copy_id\n        string status\n    }\n    USER {\n        int user_id\n        string name\n    }\n    LOAN {\n        int loan_id\n        date due_date\n    }\n    FINE {\n        int fine_id\n        float amount\n    }\n    REVIEW {\n        int review_id\n        int rating\n        string comment\n    }\n\n    AUTHOR ||--o{ BOOK : writes\n    CATEGORY ||--o{ BOOK : classifies\n    PUBLISHER ||--o{ BOOK : publishes\n    BOOK ||--o{ COPY : contains\n    USER ||--o{ LOAN : borrows\n    COPY ||--o{ LOAN : loaned\n    LOAN ||--o{ FINE : results_in\n    USER ||--o{ REVIEW : writes\n    BOOK ||--o{ REVIEW : receives"
+  },
+  {
+    "prompt": "Provide a class diagram for an online university LMS including Course, Module, Lecture, Quiz, Question, Student, Instructor, Submission, Grade, Forum, and ForumPost. Show inheritance where applicable.",
+    "diagram": "classDiagram\n    class Course {\n        +courseId: int\n        +title: string\n        +start()\n        +end()\n    }\n    class Module {\n        +moduleId: int\n        +title: string\n    }\n    class Lecture {\n        +lectureId: int\n        +title: string\n        +view()\n    }\n    class Quiz {\n        +quizId: int\n        +start()\n    }\n    class Question {\n        +questionId: int\n        +text: string\n    }\n    class Student {\n        +id: int\n        +name: string\n        +submitAssignment()\n    }\n    class Instructor {\n        +id: int\n        +name: string\n        +gradeSubmission()\n    }\n    class Submission {\n        +submissionId: int\n        +timestamp: Date\n    }\n    class Grade {\n        +gradeId: int\n        +score: float\n    }\n    class Forum {\n        +forumId: int\n        +name: string\n    }\n    class ForumPost {\n        +postId: int\n        +content: string\n    }\n\n    Course --> \"many\" Module\n    Module --> \"many\" Lecture\n    Module --> \"many\" Quiz\n    Quiz --> \"many\" Question\n    Student --> \"many\" Submission\n    Submission --> Grade\n    Instructor --> \"many\" Grade\n    Course --> Forum\n    Forum --> \"many\" ForumPost\n    Student --> \"many\" ForumPost\n    Instructor --> \"many\" ForumPost"
+  },
+  {
+    "prompt": "Create a detailed activity diagram for a customer returning a product online including steps: Login, Select Order, Request Return, Generate Label, Package Product, Drop Off, Refund Issued. Include branching logic if product is outside return window.",
+    "diagram": "flowchart TD\n    A[Login] --> B[Select Order]\n    B --> C[Request Return]\n    C -->|Within return window| D[Generate Label]\n    C -->|Outside window| E[Return Denied]\n    D --> F[Package Product]\n    F --> G[Drop Off]\n    G --> H[Refund Issued]"
+  },
+  {
+    "prompt": "Construct a state diagram for an autonomous delivery robot with states Idle, NavigatingToPickup, LoadingPackage, NavigatingToDelivery, AvoidingObstacle, DeliveringPackage, Charging, Error, Completed.",
+    "diagram": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> NavigatingToPickup\n    NavigatingToPickup --> LoadingPackage\n    LoadingPackage --> NavigatingToDelivery\n    NavigatingToDelivery --> AvoidingObstacle\n    AvoidingObstacle --> NavigatingToDelivery\n    NavigatingToDelivery --> DeliveringPackage\n    DeliveringPackage --> Completed\n    Completed --> Idle\n    NavigatingToDelivery --> Error\n    Error --> Idle\n    Idle --> Charging\n    Charging --> Idle"
+  },
+  {
+    "prompt": "Generate a detailed sequence diagram for an airline booking process including Passenger, Website, PaymentProcessor, AirlineAPI, TicketingService, and EmailService. Show seat selection, seat lock, payment, ticket issuance, and email notification.",
+    "diagram": "sequenceDiagram\n    participant Passenger\n    participant Website\n    participant AirlineAPI\n    participant PaymentProcessor\n    participant TicketingService\n    participant EmailService\n\n    Passenger ->> Website: Search flights\n    Website ->> AirlineAPI: Query availability\n    AirlineAPI -->> Website: Available flights\n    Passenger ->> Website: Select seat\n    Website ->> AirlineAPI: Lock seat\n\n    Passenger ->> Website: Provide payment details\n    Website ->> PaymentProcessor: Process payment\n    PaymentProcessor -->> Website: Payment success\n\n    Website ->> TicketingService: Issue ticket\n    TicketingService -->> Website: Ticket issued\n\n    Website ->> EmailService: Send confirmation email\n    EmailService -->> Passenger: Ticket confirmed"
+  },
+  {
+    "prompt": "Create a large ER diagram for a ride-sharing platform with entities Driver, Rider, Ride, Vehicle, Payment, Rating, PromoCode, Location, Route, and IncidentReport.",
+    "diagram": "erDiagram\n    DRIVER {\n        int driver_id\n        string name\n        string license\n    }\n    RIDER {\n        int rider_id\n        string name\n    }\n    RIDE {\n        int ride_id\n        datetime start_time\n        datetime end_time\n    }\n    VEHICLE {\n        int vehicle_id\n        string model\n    }\n    PAYMENT {\n        int payment_id\n        float amount\n    }\n    RATING {\n        int rating_id\n        int score\n    }\n    PROMOCODE {\n        int code_id\n        string code\n    }\n    LOCATION {\n        int loc_id\n        string coord\n    }\n    ROUTE {\n        int route_id\n        string description\n    }\n    INCIDENTREPORT {\n        int inc_id\n        string detail\n    }\n\n    DRIVER ||--o{ VEHICLE : owns\n    DRIVER ||--o{ RIDE : drives\n    RIDER ||--o{ RIDE : takes\n    RIDE ||--o{ PAYMENT : billed_with\n    RIDE ||--o{ RATING : evaluated_by\n    RIDE }o--o{ ROUTE : follows\n    ROUTE ||--o{ LOCATION : contains\n    RIDE ||--o{ INCIDENTREPORT : records\n    RIDER ||--o{ PROMOCODE : uses"
+  },
+
+  {
+    "prompt": "Build a class diagram for a smart home ecosystem with classes Hub, Device, Sensor, Actuator, Thermostat, Light, Camera, MobileApp, User, Alert, and RuleEngine. Show inheritance and associations.",
+    "diagram": "classDiagram\n    class Hub {\n        +hubId: int\n        +connectDevice()\n    }\n    class Device {\n        +deviceId: int\n        +status: string\n        +activate()\n        +deactivate()\n    }\n    class Sensor extends Device {\n        +readValue()\n    }\n    class Actuator extends Device {\n        +executeAction()\n    }\n    class Thermostat extends Sensor {\n        +currentTemp: float\n    }\n    class Light extends Actuator {\n        +brightness: int\n    }\n    class Camera extends Sensor {\n        +record()\n    }\n    class MobileApp {\n        +login()\n        +modifySettings()\n    }\n    class User {\n        +userId: int\n        +name: string\n    }\n    class Alert {\n        +alertId: int\n        +message: string\n    }\n    class RuleEngine {\n        +ruleId: int\n        +executeRules()\n    }\n\n    Hub --> \"many\" Device\n    MobileApp --> Hub\n    User --> MobileApp\n    Hub --> \"many\" Alert\n    RuleEngine --> Hub"
+  },
+
+  {
+    "prompt": "Generate a comprehensive ER diagram for a cinema ticketing system including Movie, Screening, Theater, Seat, Customer, Ticket, Concession, ConcessionOrder, Payment, and Discount entities.",
+    "diagram": "erDiagram\n    MOVIE {\n        int movie_id\n        string title\n        int duration\n    }\n    THEATER {\n        int theater_id\n        string name\n    }\n    SCREENING {\n        int screening_id\n        datetime time\n    }\n    SEAT {\n        int seat_id\n        string seatNumber\n    }\n    CUSTOMER {\n        int customer_id\n        string name\n    }\n    TICKET {\n        int ticket_id\n    }\n    CONCESSION {\n        int concession_id\n        string item\n    }\n    CONCESSIONORDER {\n        int order_id\n    }\n    PAYMENT {\n        int payment_id\n        float amount\n    }\n    DISCOUNT {\n        int discount_id\n        float percentage\n    }\n\n    MOVIE ||--o{ SCREENING : shown_at\n    THEATER ||--o{ SCREENING : hosts\n    SCREENING ||--o{ SEAT : contains\n    CUSTOMER ||--o{ TICKET : purchases\n    SCREENING ||--o{ TICKET : for\n    CUSTOMER ||--o{ CONCESSIONORDER : buys\n    CONCESSION }o--o{ CONCESSIONORDER : contains\n    TICKET ||--o{ PAYMENT : paid_with\n    PAYMENT ||--o{ DISCOUNT : applied"
+  },
+
+  {
+    "prompt": "Develop a detailed class diagram for a blockchain smart contract platform including Block, Transaction, Wallet, User, Miner, Node, SmartContract, EventLog, Signature, and Network.",
+    "diagram": "classDiagram\n    class Block {\n        +blockId: int\n        +timestamp: Date\n        +hash: string\n        +validate()\n    }\n    class Transaction {\n        +txId: int\n        +value: float\n        +execute()\n    }\n    class Signature {\n        +sig: string\n    }\n    class Wallet {\n        +walletId: int\n        +balance: float\n        +sendTransaction()\n    }\n    class User {\n        +userId: int\n        +name: string\n    }\n    class Miner {\n        +minerId: int\n        +mineBlock()\n    }\n    class Node {\n        +nodeId: int\n        +sync()\n    }\n    class SmartContract {\n        +contractId: int\n        +run()\n    }\n    class EventLog {\n        +entryId: int\n    }\n    class Network {\n        +networkId: int\n        +broadcast()\n    }\n\n    Block --> \"many\" Transaction\n    Transaction --> Signature\n    Wallet --> \"many\" Transaction\n    User --> Wallet\n    Miner --> Block\n    Node --> Network\n    SmartContract --> \"many\" Transaction\n    SmartContract --> \"many\" EventLog"
+  },
+
+  {
+    "prompt": "Create a sequence diagram for cloud login using MFA, involving User, Browser, WebApp, IdentityProvider, MFAService, TokenService, and SessionManager. Include MFA challenge and token issuance.",
+    "diagram": "sequenceDiagram\n    participant User\n    participant Browser\n    participant WebApp\n    participant IdentityProvider\n    participant MFAService\n    participant TokenService\n    participant SessionManager\n\n    User ->> Browser: Enter credentials\n    Browser ->> WebApp: Send login\n    WebApp ->> IdentityProvider: Authenticate\n    IdentityProvider ->> MFAService: Trigger MFA challenge\n    MFAService -->> User: Verify code\n    User ->> Browser: Enters MFA code\n    Browser ->> IdentityProvider: Submit code\n    IdentityProvider ->> TokenService: Issue token\n    TokenService -->> WebApp: Token\n    WebApp ->> SessionManager: Create session\n    SessionManager -->> Browser: Session established"
+  },
+
+  {
+    "prompt": "Generate a detailed ER diagram for a logistics supply chain system including Supplier, Warehouse, Item, Shipment, Truck, Driver, Route, CustomerOrder, Delivery, Invoice, and LoadingDock entities.",
+    "diagram": "erDiagram\n    SUPPLIER {\n        int supplier_id\n        string name\n    }\n    WAREHOUSE {\n        int wh_id\n        string location\n    }\n    ITEM {\n        int item_id\n        string name\n    }\n    SHIPMENT {\n        int ship_id\n        date shipDate\n    }\n    TRUCK {\n        int truck_id\n        string licensePlate\n    }\n    DRIVER {\n        int driver_id\n        string name\n    }\n    ROUTE {\n        int route_id\n        string path\n    }\n    CUSTOMERORDER {\n        int order_id\n    }\n    DELIVERY {\n        int delivery_id\n    }\n    INVOICE {\n        int invoice_id\n        float total\n    }\n    LOADINGDOCK {\n        int dock_id\n        string name\n    }\n\n    SUPPLIER ||--o{ ITEM : provides\n    WAREHOUSE ||--o{ ITEM : stores\n    WAREHOUSE ||--o{ LOADINGDOCK : contains\n    SHIPMENT }o--o{ ITEM : carries\n    SHIPMENT ||--o{ TRUCK : transported_by\n    TRUCK ||--o{ DRIVER : driven_by\n    SHIPMENT ||--o{ ROUTE : follows\n    CUSTOMERORDER ||--o{ DELIVERY : fulfilled_by\n    DELIVERY ||--o{ INVOICE : billed_as"
+  },
+
+  {
+    "prompt": "Build a detailed class diagram for a cybersecurity monitoring dashboard with classes Alert, ThreatIntel, LogEntry, Sensor, DashboardUser, CorrelationEngine, NetworkAsset, Vulnerability, Patch, and Ticket. Show relationships and key methods.",
+    "diagram": "classDiagram\n    class Alert {\n        +alertId: int\n        +severity: string\n        +timestamp: Date\n        +acknowledge()\n    }\n    class ThreatIntel {\n        +intelId: int\n        +source: string\n        +analyze()\n    }\n    class LogEntry {\n        +logId: int\n        +content: string\n    }\n    class Sensor {\n        +sensorId: int\n        +collect()\n    }\n    class DashboardUser {\n        +userId: int\n        +name: string\n        +acknowledgeAlert()\n    }\n    class CorrelationEngine {\n        +correlate()\n    }\n    class NetworkAsset {\n        +assetId: int\n        +hostname: string\n    }\n    class Vulnerability {\n        +vulnId: int\n        +cvss: float\n    }\n    class Patch {\n        +patchId: int\n        +apply()\n    }\n    class Ticket {\n        +ticketId: int\n        +status: string\n        +closeTicket()\n    }\n\n    Sensor --> \"many\" LogEntry\n    LogEntry --> CorrelationEngine\n    CorrelationEngine --> \"many\" Alert\n    DashboardUser --> \"many\" Alert\n    NetworkAsset --> \"many\" Vulnerability\n    Vulnerability --> Patch\n    Alert --> Ticket"
+  },
+
+  {
+    "prompt": "Construct a sequence diagram for processing an insurance claim involving Customer, AgentPortal, ClaimSystem, DocumentService, FraudEngine, PaymentUnit, and NotificationService. Include document upload, fraud scoring, claim approval, and payout notification.",
+    "diagram": "sequenceDiagram\n    participant Customer\n    participant AgentPortal\n    participant ClaimSystem\n    participant DocumentService\n    participant FraudEngine\n    participant PaymentUnit\n    participant NotificationService\n\n    Customer ->> AgentPortal: Submit claim\n    AgentPortal ->> DocumentService: Upload documents\n    DocumentService -->> AgentPortal: Upload confirmed\n\n    AgentPortal ->> ClaimSystem: Create claim record\n    ClaimSystem ->> FraudEngine: Evaluate claim\n    FraudEngine -->> ClaimSystem: Score returned\n\n    ClaimSystem ->> PaymentUnit: Approve payment\n    PaymentUnit -->> ClaimSystem: Payment processed\n\n    ClaimSystem ->> NotificationService: Send payout notice\n    NotificationService -->> Customer: Claim settled"
+  },
+
+  {
+    "prompt": "Create a comprehensive class diagram for an online streaming platform including User, Subscriber, Admin, Video, Series, Episode, WatchHistory, SubscriptionPlan, Billing, AdCampaign, Advert, and RecommendationEngine. Include inheritance and associative classes.",
+    "diagram": "classDiagram\n    class User {\n        +userId: int\n        +email: string\n        +login()\n    }\n    class Subscriber extends User {\n        +subscriptionStatus: string\n    }\n    class Admin extends User {\n        +manageContent()\n    }\n    class Video {\n        +videoId: int\n        +title: string\n    }\n    class Series {\n        +seriesId: int\n        +name: string\n    }\n    class Episode {\n        +episodeId: int\n        +name: string\n    }\n    class WatchHistory {\n        +timestamp: Date\n    }\n    class SubscriptionPlan {\n        +planId: int\n        +price: float\n    }\n    class Billing {\n        +billId: int\n        +processPayment()\n    }\n    class Advert {\n        +adId: int\n        +content: string\n    }\n    class AdCampaign {\n        +campaignId: int\n        +start()\n    }\n    class RecommendationEngine {\n        +genRecommendations()\n    }\n\n    Series --> \"many\" Episode\n    Episode --> Video\n    Subscriber --> SubscriptionPlan\n    Subscriber --> \"many\" WatchHistory\n    WatchHistory --> Episode\n    Billing --> Subscriber\n    AdCampaign --> \"many\" Advert\n    RecommendationEngine --> Subscriber"
+  },
+
+  {
+    "prompt": "Build a state diagram for a smart irrigation controller with states Idle, MeasuringMoisture, Evaluating, Irrigating, PausedForRain, Error, Maintenance, and CompletedCycle. Include return transitions.",
+    "diagram": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> MeasuringMoisture\n    MeasuringMoisture --> Evaluating\n    Evaluating --> Irrigating\n    Evaluating --> PausedForRain\n    Irrigating --> CompletedCycle\n    PausedForRain --> MeasuringMoisture\n    CompletedCycle --> Idle\n    Evaluating --> Error\n    Error --> Maintenance\n    Maintenance --> Idle"
+  },
+
+  {
+    "prompt": "Create a detailed ER diagram for a hospital pharmacy system with Drug, Manufacturer, Prescription, Doctor, Patient, PharmacyBranch, InventoryBatch, Insurance, Claim, and DispenseTransaction entities, including cardinalities.",
+    "diagram": "erDiagram\n    DRUG {\n        int drug_id\n        string name\n    }\n    MANUFACTURER {\n        int manu_id\n        string name\n    }\n    PRESCRIPTION {\n        int rx_id\n        date date_written\n    }\n    DOCTOR {\n        int doctor_id\n        string name\n    }\n    PATIENT {\n        int patient_id\n        string name\n    }\n    PHARMACYBRANCH {\n        int branch_id\n        string location\n    }\n    INVENTORYBATCH {\n        int batch_id\n        int quantity\n    }\n    INSURANCE {\n        int ins_id\n        string provider\n    }\n    CLAIM {\n        int claim_id\n    }\n    DISPENSETRANSACTION {\n        int dt_id\n    }\n\n    MANUFACTURER ||--o{ DRUG : produces\n    DRUG ||--o{ INVENTORYBATCH : stocked\n    PATIENT ||--o{ PRESCRIPTION : receives\n    DOCTOR ||--o{ PRESCRIPTION : writes\n    PRESCRIPTION ||--o{ DISPENSETRANSACTION : filled\n    DISPENSETRANSACTION ||--o{ CLAIM : billed\n    CLAIM ||--o{ INSURANCE : handled_by\n    PHARMACYBRANCH ||--o{ DISPENSETRANSACTION : processed_at"
+  },
+
+  {
+    "prompt": "Generate a sequence diagram for ordering a SaaS CRM subscription involving Customer, Website, BillingService, CreditCardProcessor, CRMProvisioning, EmailServer, and TrialManager. Include free trial logic and immediate provisioning.",
+    "diagram": "sequenceDiagram\n    participant Customer\n    participant Website\n    participant BillingService\n    participant CreditCardProcessor\n    participant CRMProvisioning\n    participant TrialManager\n    participant EmailServer\n\n    Customer ->> Website: Select plan and register\n    Website ->> TrialManager: Check free trial eligibility\n    TrialManager -->> Website: Eligible\n\n    Website ->> BillingService: Create billing account\n    BillingService ->> CreditCardProcessor: Authorize payment\n    CreditCardProcessor -->> BillingService: Payment confirmed\n\n    BillingService ->> CRMProvisioning: Provision CRM instance\n    CRMProvisioning -->> Website: Instance ready\n\n    Website ->> EmailServer: Send welcome email\n    EmailServer -->> Customer: Delivered"
+  },
+
+  {
+    "prompt": "Create a large class diagram for a manufacturing execution system including Factory, ProductionLine, Workstation, Operator, JobOrder, Machine, Part, MaterialLot, SensorData, QualityCheck, ScrapReport, MaintenanceRequest, and DataWarehouse.",
+    "diagram": "classDiagram\n    class Factory {\n        +factoryId: int\n        +name: string\n    }\n    class ProductionLine {\n        +lineId: int\n        +capacity: int\n    }\n    class Workstation {\n        +stationId: int\n        +type: string\n    }\n    class Operator {\n        +operatorId: int\n        +name: string\n    }\n    class JobOrder {\n        +orderId: int\n        +priority: int\n    }\n    class Machine {\n        +machineId: int\n        +model: string\n    }\n    class Part {\n        +partId: int\n        +name: string\n    }\n    class MaterialLot {\n        +lotId: int\n        +quantity: int\n    }\n    class SensorData {\n        +dataId: int\n        +value: float\n    }\n    class QualityCheck {\n        +qcId: int\n        +result: string\n    }\n    class ScrapReport {\n        +srId: int\n        +amount: int\n    }\n    class MaintenanceRequest {\n        +mrId: int\n        +description: string\n    }\n    class DataWarehouse {\n        +loadData()\n    }\n\n    Factory --> \"many\" ProductionLine\n    ProductionLine --> \"many\" Workstation\n    Workstation --> \"many\" Machine\n    Operator --> \"many\" JobOrder\n    JobOrder --> \"many\" Part\n    Part --> MaterialLot\n    Machine --> \"many\" SensorData\n    JobOrder --> \"many\" QualityCheck\n    JobOrder --> \"many\" ScrapReport\n    Machine --> \"many\" MaintenanceRequest\n    DataWarehouse --> SensorData\n    DataWarehouse --> QualityCheck\n    DataWarehouse --> ScrapReport"
+  },
+
+  {
+    "prompt": "Construct a state diagram for a warehouse robotic picker that includes states Docked, NavigatingToShelf, PickingItem, WaitingForHumanAssist, ReturningToBase, Unloading, Error, Maintenance, and Shutdown.",
+    "diagram": "stateDiagram-v2\n    [*] --> Docked\n    Docked --> NavigatingToShelf\n    NavigatingToShelf --> PickingItem\n    PickingItem --> WaitingForHumanAssist\n    WaitingForHumanAssist --> PickingItem\n    PickingItem --> ReturningToBase\n    ReturningToBase --> Unloading\n    Unloading --> Docked\n    NavigatingToShelf --> Error\n    PickingItem --> Error\n    Error --> Maintenance\n    Maintenance --> Docked\n    Docked --> Shutdown"
+  },
+
+  {
+    "prompt": "Generate an ER diagram for a digital marketing analytics platform including Campaign, Ad, Channel, Impression, Click, Conversion, Budget, Client, Report, and AudienceSegment entities.",
+    "diagram": "erDiagram\n    CAMPAIGN {\n        int campaign_id\n        string name\n    }\n    AD {\n        int ad_id\n        string content\n    }\n    CHANNEL {\n        int channel_id\n        string type\n    }\n    IMPRESSION {\n        int imp_id\n        datetime timestamp\n    }\n    CLICK {\n        int click_id\n        datetime timestamp\n    }\n    CONVERSION {\n        int conv_id\n        datetime timestamp\n    }\n    BUDGET {\n        int budget_id\n        float amount\n    }\n    CLIENT {\n        int client_id\n        string name\n    }\n    REPORT {\n        int report_id\n    }\n    AUDIENCESEGMENT {\n        int seg_id\n        string criteria\n    }\n\n    CLIENT ||--o{ CAMPAIGN : owns\n    CAMPAIGN ||--o{ AD : contains\n    AD ||--o{ CHANNEL : published_in\n    AD ||--o{ IMPRESSION : receives\n    IMPRESSION ||--o{ CLICK : leads_to\n    CLICK ||--o{ CONVERSION : ends_with\n    CAMPAIGN ||--o{ BUDGET : allocated\n    CAMPAIGN ||--o{ REPORT : summarized_in\n    CAMPAIGN ||--o{ AUDIENCESEGMENT : targeted_at"
+  },
+
+  {
+    "prompt": "Build a class diagram for a multiplayer online game backend including Player, Inventory, Item, Weapon, Armor, Skill, MatchmakingService, GameSession, Scoreboard, ChatChannel, Achievement, and Reward. Include inheritance and key associations.",
+    "diagram": "classDiagram\n    class Player {\n        +playerId: int\n        +username: string\n        +joinGame()\n    }\n    class Inventory {\n        +slots: int\n    }\n    class Item {\n        +itemId: int\n        +name: string\n    }\n    class Weapon extends Item {\n        +damage: int\n    }\n    class Armor extends Item {\n        +defense: int\n    }\n    class Skill {\n        +skillId: int\n        +useSkill()\n    }\n    class MatchmakingService {\n        +findMatch()\n    }\n    class GameSession {\n        +sessionId: int\n    }\n    class Scoreboard {\n        +recordScore()\n    }\n    class ChatChannel {\n        +sendMessage()\n    }\n    class Achievement {\n        +achievementId: int\n    }\n    class Reward {\n        +rewardId: int\n        +grant()\n    }\n\n    Player --> Inventory\n    Inventory --> \"many\" Item\n    Player --> \"many\" Skill\n    MatchmakingService --> GameSession\n    GameSession --> \"many\" Player\n    GameSession --> Scoreboard\n    Player --> \"many\" Achievement\n    Achievement --> Reward\n    GameSession --> ChatChannel"
+  },
+
+  {
+    "prompt": "Create a sequence diagram for purchasing cryptocurrency using an exchange platform involving Trader, WebApp, AuthService, WalletService, OrderEngine, BlockchainNode, and NotificationCenter.",
+    "diagram": "sequenceDiagram\n    participant Trader\n    participant WebApp\n    participant AuthService\n    participant WalletService\n    participant OrderEngine\n    participant BlockchainNode\n    participant NotificationCenter\n\n    Trader ->> WebApp: Login request\n    WebApp ->> AuthService: Validate credentials\n    AuthService -->> WebApp: Auth OK\n\n    Trader ->> WebApp: Submit buy order\n    WebApp ->> OrderEngine: Execute trade\n    OrderEngine ->> WalletService: Deduct balance\n    WalletService -->> OrderEngine: Balance updated\n\n    OrderEngine ->> BlockchainNode: Broadcast transaction\n    BlockchainNode -->> OrderEngine: Confirmed\n\n    OrderEngine ->> NotificationCenter: Send update\n    NotificationCenter -->> Trader: Purchase successful"
+  },
+
+  {
+    "prompt": "Generate a detailed ER diagram for a national voting system including Voter, Ballot, Candidate, Election, Party, Precinct, VotingMachine, VoteRecord, AuditLog, and CertificationReport.",
+    "diagram": "erDiagram\n    VOTER {\n        int voter_id\n        string name\n    }\n    BALLOT {\n        int ballot_id\n        string style\n    }\n    CANDIDATE {\n        int cand_id\n        string name\n    }\n    ELECTION {\n        int elect_id\n        string name\n    }\n    PARTY {\n        int party_id\n        string name\n    }\n    PRECINCT {\n        int prec_id\n        string location\n    }\n    VOTINGMACHINE {\n        int machine_id\n        string serial\n    }\n    VOTERECORD {\n        int vr_id\n    }\n    AUDITLOG {\n        int log_id\n    }\n    CERTIFICATIONREPORT {\n        int cert_id\n    }\n\n    ELECTION ||--o{ BALLOT : uses\n    CANDIDATE ||--o{ PARTY : affiliated_with\n    PRECINCT ||--o{ VOTINGMACHINE : contains\n    VOTER ||--o{ VOTERECORD : casts\n    BALLOT ||--o{ VOTERECORD : recorded_on\n    VOTINGMACHINE ||--o{ AUDITLOG : generates\n    ELECTION ||--o{ CERTIFICATIONREPORT : certified_by"
+  },
+
+  {
+    "prompt": "Construct a complex class diagram for an AI model training pipeline including Dataset, DataSample, Preprocessor, FeatureExtractor, Model, Trainer, HyperparameterSet, ValidationRun, Metric, DeploymentTarget, and MonitoringService.",
+    "diagram": "classDiagram\n    class Dataset {\n        +datasetId: int\n        +load()\n    }\n    class DataSample {\n        +sampleId: int\n        +rawData: string\n    }\n    class Preprocessor {\n        +clean()\n    }\n    class FeatureExtractor {\n        +extract()\n    }\n    class Model {\n        +modelId: int\n        +predict()\n    }\n    class Trainer {\n        +train()\n    }\n    class HyperparameterSet {\n        +configId: int\n    }\n    class ValidationRun {\n        +runId: int\n    }\n    class Metric {\n        +metricId: int\n        +value: float\n    }\n    class DeploymentTarget {\n        +deploy()\n    }\n    class MonitoringService {\n        +monitor()\n    }\n\n    Dataset --> \"many\" DataSample\n    DataSample --> Preprocessor\n    Preprocessor --> FeatureExtractor\n    FeatureExtractor --> Trainer\n    Trainer --> Model\n    Trainer --> HyperparameterSet\n    Model --> \"many\" ValidationRun\n    ValidationRun --> \"many\" Metric\n    Model --> DeploymentTarget\n    DeploymentTarget --> MonitoringService"
+  },
+  {
+    "prompt": "Create a class diagram for a library system with Book, Member, and Loan. A loan links a member to a book with issue and return dates.",
+    "diagram": "classDiagram\n    class Book { title; isbn }\n    class Member { id; name }\n    class Loan { issueDate; returnDate }\n    Member --> Loan\n    Book --> Loan"
+  },
+  {
+    "prompt": "Generate a sequence diagram showing a user purchasing a product online: user selects item, enters payment, server processes payment, backend confirms order.",
+    "diagram": "sequenceDiagram\n    User->>Frontend: Select item\n    Frontend->>Server: Send payment data\n    Server->>PaymentProcessor: Validate transaction\n    PaymentProcessor->>Server: Approved\n    Server->>Backend: Create order\n    Backend->>Frontend: Order confirmed"
+  },
+  {
+    "prompt": "Create a state diagram for an e-commerce order workflow including states: Created, Paid, Packed, Shipped, Delivered.",
+    "diagram": "stateDiagram\n    Created --> Paid\n    Paid --> Packed\n    Packed --> Shipped\n    Shipped --> Delivered"
+  },
+  {
+    "prompt": "Class diagram for a hospital system including Patient, Doctor, Consultation, and Prescription. Consultation connects doctor and patient, and prescriptions belong to a consultation.",
+    "diagram": "classDiagram\n    class Patient { id; name }\n    class Doctor { id; name; specialty }\n    class Consultation { date }\n    class Prescription { medicine; dosage }\n    Doctor --> Consultation\n    Patient --> Consultation\n    Consultation --> Prescription"
+  },
+  {
+    "prompt": "Sequence diagram for hotel booking: User checks availability, system queries database, returns available rooms, user confirms booking, system stores reservation.",
+    "diagram": "sequenceDiagram\n    User->>System: Check availability\n    System->>Database: Query rooms\n    Database-->>System: Room list\n    System-->>User: Rooms available\n    User->>System: Confirm booking\n    System->>Database: Store reservation"
+  },
+  {
+    "prompt": "Activity diagram for a user registering on a website with steps: fill form, validate data, create user, send confirmation email.",
+    "diagram": "flowchart TD\n    A[Fill registration form] --> B[Validate data]\n    B --> C[Create user]\n    C --> D[Send confirmation email]"
+  },
+  {
+    "prompt": "Create a class diagram for a school database with Student, Course, Teacher, and Enrollment linking students and courses.",
+    "diagram": "classDiagram\n    Student --> Enrollment\n    Course --> Enrollment\n    Teacher --> Course\n    class Student { studentId; name }\n    class Course { courseId; name }\n    class Teacher { teacherId; name }\n    class Enrollment { grade }"
+  },
+  {
+    "prompt": "Sequence diagram where a client requests weather data, the server fetches from API, returns formatted results.",
+    "diagram": "sequenceDiagram\n    Client->>Server: Request weather\n    Server->>WeatherAPI: Fetch data\n    WeatherAPI-->>Server: Weather results\n    Server-->>Client: Formatted forecast"
+  },
+  {
+    "prompt": "State diagram for ATM cash withdrawal including CardInserted, PinEntered, TransactionSelected, Dispensing, TransactionComplete.",
+    "diagram": "stateDiagram\n    CardInserted --> PinEntered\n    PinEntered --> TransactionSelected\n    TransactionSelected --> Dispensing\n    Dispensing --> TransactionComplete"
+  },
+  {
+    "prompt": "Class diagram for ride sharing platform with Rider, Driver, Trip, Payment. Trip links driver and rider; payment references trip.",
+    "diagram": "classDiagram\n    Rider --> Trip\n    Driver --> Trip\n    Trip --> Payment\n    class Rider { name }\n    class Driver { name; carModel }\n    class Trip { startLocation; endLocation }\n    class Payment { amount; method }"
+  },
+  {
+    "prompt": "Activity diagram of document approval workflow: Write Document, Submit, Review, Approve or Reject.",
+    "diagram": "flowchart TD\n    A[Write Document] --> B[Submit]\n    B --> C[Review]\n    C -->|Approved| D[Approved]\n    C -->|Rejected| E[Rejected]"
+  },
+  {
+    "prompt": "Sequence diagram where user resets password, system sends reset email, user enters new password, system updates database.",
+    "diagram": "sequenceDiagram\n    User->>System: Request password reset\n    System->>EmailService: Send reset link\n    User->>System: Provide new password\n    System->>Database: Update password"
+  },
+  {
+    "prompt": "Class diagram for restaurant POS system with Order, Item, Table, Invoice. Order has many items, invoice belongs to order.",
+    "diagram": "classDiagram\n    Order --> Item\n    Order --> Invoice\n    Table --> Order\n    class Order { orderId }\n    class Item { name; price }\n    class Table { number }\n    class Invoice { total }"
+  },
+  {
+    "prompt": "State diagram for user authentication including LoggedOut, Verifying, LoggedIn, SessionExpired.",
+    "diagram": "stateDiagram\n    LoggedOut --> Verifying\n    Verifying --> LoggedIn\n    LoggedIn --> SessionExpired\n    SessionExpired --> LoggedOut"
+  },
+  {
+    "prompt": "Sequence diagram for payment gateway interaction: merchant collects payment data, gateway processes, bank validates, response returns.",
+    "diagram": "sequenceDiagram\n    Merchant->>Gateway: Payment details\n    Gateway->>Bank: Validate transaction\n    Bank-->>Gateway: Approved/Denied\n    Gateway-->>Merchant: Payment response"
+  },
+  {
+    "prompt": "Class diagram for university with Department, Professor, Course, Student. Department owns Professors and Courses; students enroll in courses.",
+    "diagram": "classDiagram\n    Department --> Professor\n    Department --> Course\n    Student --> Course\n    class Department { name }\n    class Professor { name }\n    class Course { code; name }\n    class Student { id; name }"
+  },
+  {
+    "prompt": "Activity diagram for support ticket lifecycle: Customer submits ticket, System assigns agent, Agent resolves, Ticket closes.",
+    "diagram": "flowchart TD\n    A[Submit ticket] --> B[Assign agent]\n    B --> C[Resolve issue]\n    C --> D[Close ticket]"
+  },
+  {
+    "prompt": "Sequence diagram for airline check-in: passenger sends details, system verifies seat availability, assigns seat, sends boarding pass.",
+    "diagram": "sequenceDiagram\n    Passenger->>System: Provide details\n    System->>Database: Check seat availability\n    Database-->>System: Seats free\n    System->>Passenger: Boarding pass"
+  },
+  {
+    "prompt": "Class diagram for ecommerce promotion system: Promotion applies to Product and stores discount rules.",
+    "diagram": "classDiagram\n    Promotion --> Product\n    class Promotion { name; discount }\n    class Product { name; price }"
+  },
+  {
+    "prompt": "State diagram for online exam including NotStarted, Ready, Running, Submitted, Graded.",
+    "diagram": "stateDiagram\n    NotStarted --> Ready\n    Ready --> Running\n    Running --> Submitted\n    Submitted --> Graded"
+  },
+  {
+    "prompt": "Sequence diagram for newsletter signup: user enters email, system stores, system sends welcome.",
+    "diagram": "sequenceDiagram\n    User->>System: Submit email\n    System->>Database: Store\n    System->>MailServer: Send welcome"
+  },
+  {
+    "prompt": "Class diagram for banking with Account, Transaction, Customer, Branch. Customer holds accounts in a branch, accounts have transactions.",
+    "diagram": "classDiagram\n    Customer --> Account\n    Branch --> Customer\n    Account --> Transaction\n    class Customer { name }\n    class Account { number; balance }\n    class Transaction { amount; date }\n    class Branch { name }"
+  },
+  {
+    "prompt": "Activity diagram for food delivery: user orders food, restaurant prepares, courier delivers, order completes.",
+    "diagram": "flowchart TD\n    A[Order food] --> B[Restaurant prepares]\n    B --> C[Courier delivers]\n    C --> D[Order complete]"
+  },
+  {
+    "prompt": "State diagram for content publishing workflow: Draft, Review, Revision, Published, Archived.",
+    "diagram": "stateDiagram\n    Draft --> Review\n    Review --> Published\n    Review --> Revision\n    Revision --> Review\n    Published --> Archived"
+  },
+  {
+    "prompt": "Create a class diagram for movie streaming: Movie, User, Subscription, ViewingHistory. Subscription links to user and history links to both user and movie.",
+    "diagram": "classDiagram\n    User --> Subscription\n    User --> ViewingHistory\n    Movie --> ViewingHistory\n    class User { id; name }\n    class Movie { title; genre }\n    class Subscription { plan }\n    class ViewingHistory { timestamp }"
+  },
+  {
+    "prompt": "Sequence diagram where a mobile app requests map coordinates from a GPS chip and forwards the result to UI.",
+    "diagram": "sequenceDiagram\n    App->>GPS: Get location\n    GPS-->>App: Coordinates\n    App-->>UI: Update position"
+  },
+  {
+    "prompt": "Activity diagram for preparing coffee: boil water, grind beans, brew, serve.",
+    "diagram": "flowchart TD\n    A[Boil water] --> B[Grind beans]\n    B --> C[Brew]\n    C --> D[Serve]"
+  },
+  {
+    "prompt": "State diagram for parcel tracking: Packed, InTransit, OutForDelivery, Delivered, Returned.",
+    "diagram": "stateDiagram\n    Packed --> InTransit\n    InTransit --> OutForDelivery\n    OutForDelivery --> Delivered\n    Delivered --> Returned"
+  },
+  {
+    "prompt": "Class diagram for CRM with Lead, Opportunity, Customer, Interaction. Opportunity created from lead and interactions track communication.",
+    "diagram": "classDiagram\n    Lead --> Opportunity\n    Customer --> Opportunity\n    Customer --> Interaction\n    class Lead { source }\n    class Opportunity { expectedValue }\n    class Customer { id; name }\n    class Interaction { date; channel }"
+  },
+  {
+    "prompt": "Sequence diagram for job application: applicant submits resume, HR reviews, system schedules interview, sends email.",
+    "diagram": "sequenceDiagram\n    Applicant->>System: Submit resume\n    System->>HR: Notify application\n    HR->>System: Approve for interview\n    System->>EmailService: Schedule email"
+  },
+  {
+    "prompt": "Activity diagram for taking an online quiz: open quiz, answer questions, submit, view results.",
+    "diagram": "flowchart TD\n    A[Open quiz] --> B[Answer questions]\n    B --> C[Submit]\n    C --> D[View results]"
+  },
+  {
+    "prompt": "State diagram for smart light bulb: Off, TurningOn, On, Dimming, TurningOff.",
+    "diagram": "stateDiagram\n    Off --> TurningOn\n    TurningOn --> On\n    On --> Dimming\n    Dimming --> On\n    On --> TurningOff\n    TurningOff --> Off"
+  },
+  {
+    "prompt": "Class diagram for logistics with Vehicle, Driver, Shipment, Route. A shipment is transported on a route using vehicle and driver.",
+    "diagram": "classDiagram\n    Vehicle --> Shipment\n    Driver --> Shipment\n    Route --> Shipment\n    class Vehicle { regNo }\n    class Driver { name }\n    class Shipment { id }\n    class Route { start; end }"
+  },
+  {
+    "prompt": "Sequence diagram for school attendance system: teacher logs attendance, system stores record, admin reviews later.",
+    "diagram": "sequenceDiagram\n    Teacher->>System: Submit attendance\n    System->>Database: Store\n    Admin->>System: View attendance\n    System-->>Admin: Attendance data"
+  },
+  {
+    "prompt": "Activity diagram for booking a meeting room: check availability, reserve room, send confirmation.",
+    "diagram": "flowchart TD\n    A[Check availability] --> B[Reserve room]\n    B --> C[Send confirmation]"
+  },
+  {
+    "prompt": "State diagram for a timer: Stopped, Running, Paused.",
+    "diagram": "stateDiagram\n    Stopped --> Running\n    Running --> Paused\n    Paused --> Running\n    Running --> Stopped"
+  },
+  {
+    "prompt": "Class diagram for gym management: Member, Trainer, Session, Equipment. Session links member and trainer, equipment referenced.",
+    "diagram": "classDiagram\n    Member --> Session\n    Trainer --> Session\n    Equipment --> Session\n    class Member { id; name }\n    class Trainer { name }\n    class Session { date; duration }\n    class Equipment { name }"
+  },
+  {
+    "prompt": "Sequence diagram where a data analytics pipeline loads data, cleans data, trains model, outputs metrics.",
+    "diagram": "sequenceDiagram\n    Pipeline->>DataStore: Load data\n    Pipeline->>Cleaner: Clean data\n    Pipeline->>Trainer: Train model\n    Trainer-->>Pipeline: Metrics"
+  },
+  {
+    "prompt": "Activity diagram for deleting a user account: request deletion, verify identity, remove data, confirm deletion.",
+    "diagram": "flowchart TD\n    A[Request deletion] --> B[Verify identity]\n    B --> C[Remove data]\n    C --> D[Confirm deletion]"
+  },
+  {
+    "prompt": "State diagram for taxi meter: Idle, Hired, Running, PaymentPending, Complete.",
+    "diagram": "stateDiagram\n    Idle --> Hired\n    Hired --> Running\n    Running --> PaymentPending\n    PaymentPending --> Complete\n    Complete --> Idle"
+  },
+  {
+    "prompt": "Class diagram for messaging system with User, Message, Thread. Thread holds many messages; messages reference sender user.",
+    "diagram": "classDiagram\n    Thread --> Message\n    User --> Message\n    class User { id; name }\n    class Thread { id }\n    class Message { body; timestamp }"
+  },
+  {
+    "prompt": "Sequence diagram for API rate limiting: client sends request, API gateway checks limit, processes if allowed, rejects if exceeded.",
+    "diagram": "sequenceDiagram\n    Client->>Gateway: Request\n    Gateway->>RateLimiter: Check usage\n    RateLimiter-->>Gateway: Allowed\n    Gateway->>Client: Processed"
+  },
+  {
+    "prompt": "Activity diagram for performing a backup: read files, compress data, store backup, notify completion.",
+    "diagram": "flowchart TD\n    A[Read files] --> B[Compress data]\n    B --> C[Store backup]\n    C --> D[Notify completion]"
+  },
+  {
+    "prompt": "State diagram for machine washing cycle: Idle, Filling, Washing, Rinsing, Spinning, Complete.",
+    "diagram": "stateDiagram\n    Idle --> Filling\n    Filling --> Washing\n    Washing --> Rinsing\n    Rinsing --> Spinning\n    Spinning --> Complete"
+  },
+  {
+    "prompt": "Class diagram for food inventory system: FoodItem, Category, Supplier, PurchaseOrder. Items belong to categories and suppliers; orders contain items.",
+    "diagram": "classDiagram\n    Category --> FoodItem\n    Supplier --> FoodItem\n    PurchaseOrder --> FoodItem\n    class FoodItem { name; quantity }\n    class Category { name }\n    class Supplier { name }\n    class PurchaseOrder { date }"
+  },
+  {
+    "prompt": "Sequence diagram for collaborative editing: user edits doc, system locks, saves, unlocks.",
+    "diagram": "sequenceDiagram\n    User->>DocumentService: Edit request\n    DocumentService->>LockManager: Lock\n    DocumentService->>Storage: Save\n    DocumentService->>LockManager: Unlock"
+  },
+  {
+    "prompt": "Activity diagram for generating analytics report: gather data, compute metrics, generate charts, share report.",
+    "diagram": "flowchart TD\n    A[Gather data] --> B[Compute metrics]\n    B --> C[Generate charts]\n    C --> D[Share report]"
+  },
+  {
+    "prompt": "State diagram for movie player: Stopped, Playing, Paused, Buffering.",
+    "diagram": "stateDiagram\n    Stopped --> Playing\n    Playing --> Paused\n    Paused --> Playing\n    Playing --> Buffering\n    Buffering --> Playing"
+  },
+  {
+    "prompt": "Class diagram for financial accounting software: Ledger, Entry, Account, User. Ledger has entries; entries reference account and user.",
+    "diagram": "classDiagram\n    Ledger --> Entry\n    Entry --> Account\n    Entry --> User\n    class Ledger { id }\n    class Entry { amount; timestamp }\n    class Account { name }\n    class User { name }"
+  },
+  {
+    "prompt": "Create a class diagram for a digital library with User, Book, Category, and ReadingSession. Users read books and sessions track start time and progress.",
+    "diagram": "classDiagram\n    User --> ReadingSession\n    Book --> ReadingSession\n    Category --> Book\n    class User { id; name }\n    class Book { title; isbn }\n    class Category { name }\n    class ReadingSession { startTime; progress }"
+  },
+  {
+    "prompt": "Sequence diagram of a mobile banking login: user enters credentials, app sends request, server validates, returns token, app stores token.",
+    "diagram": "sequenceDiagram\n    User->>MobileApp: Enter credentials\n    MobileApp->>Server: Validate credentials\n    Server-->>MobileApp: Auth token\n    MobileApp-->>User: Login successful"
+  },
+  {
+    "prompt": "Activity diagram for inventory restock: detect low stock, create purchase order, send to supplier, receive goods, update inventory.",
+    "diagram": "flowchart TD\n    A[Detect low stock] --> B[Create PO]\n    B --> C[Send to supplier]\n    C --> D[Receive goods]\n    D --> E[Update inventory]"
+  },
+  {
+    "prompt": "State diagram for user subscription lifecycle: Trial, Active, PastDue, Canceled.",
+    "diagram": "stateDiagram\n    Trial --> Active\n    Active --> PastDue\n    PastDue --> Active\n    PastDue --> Canceled"
+  },
+  {
+    "prompt": "Class diagram for a course registration system: Course, Student, Instructor, Schedule. Students register for scheduled courses taught by instructors.",
+    "diagram": "classDiagram\n    Student --> Schedule\n    Course --> Schedule\n    Instructor --> Schedule\n    class Student { id; name }\n    class Course { code; title }\n    class Instructor { name; department }\n    class Schedule { semester }"
+  },
+  {
+    "prompt": "Sequence diagram of placing a food delivery order: user selects items, system calculates total, payment processed, restaurant notified.",
+    "diagram": "sequenceDiagram\n    User->>System: Select items\n    System->>System: Calculate total\n    System->>PaymentGateway: Charge card\n    PaymentGateway-->>System: Confirmed\n    System->>Restaurant: New order"
+  },
+  {
+    "prompt": "Activity diagram for car rental return: inspect car, compute charges, finalize invoice, close rental.",
+    "diagram": "flowchart TD\n    A[Inspect car] --> B[Compute charges]\n    B --> C[Finalize invoice]\n    C --> D[Close rental]"
+  },
+  {
+    "prompt": "Class diagram of social media interactions with User, Post, Comment, Like. Posts have comments and likes.",
+    "diagram": "classDiagram\n    User --> Post\n    Post --> Comment\n    Post --> Like\n    User --> Like\n    class User { id; name }\n    class Post { id; text }\n    class Comment { text }\n    class Like { timestamp }"
+  },
+  {
+    "prompt": "State diagram for a vending machine: Idle, WaitingForSelection, WaitingForMoney, Dispensing, OutOfStock.",
+    "diagram": "stateDiagram\n    Idle --> WaitingForSelection\n    WaitingForSelection --> WaitingForMoney\n    WaitingForMoney --> Dispensing\n    Dispensing --> Idle\n    WaitingForSelection --> OutOfStock"
+  },
+  {
+    "prompt": "Sequence diagram for online tech support: user submits ticket, system stores it, agent reviews, user receives follow-up.",
+    "diagram": "sequenceDiagram\n    User->>System: Submit ticket\n    System->>Database: Store ticket\n    Agent->>System: Review queue\n    System-->>User: Response sent"
+  },
+  {
+    "prompt": "Class diagram for a smart thermostat system with Device, Room, TemperatureReading, Setting. Settings target specific rooms.",
+    "diagram": "classDiagram\n    Device --> Room\n    Room --> TemperatureReading\n    Room --> Setting\n    class Device { serialNumber }\n    class Room { name }\n    class TemperatureReading { timestamp; value }\n    class Setting { targetTemperature }"
+  },
+  {
+    "prompt": "Activity diagram for editing a photo: upload, open editor, apply effects, save, export.",
+    "diagram": "flowchart TD\n    A[Upload photo] --> B[Open editor]\n    B --> C[Apply effects]\n    C --> D[Save]\n    D --> E[Export]"
+  },
+  {
+    "prompt": "State diagram of a commuter train: Parked, Boarding, Running, StoppedAtStation.",
+    "diagram": "stateDiagram\n    Parked --> Boarding\n    Boarding --> Running\n    Running --> StoppedAtStation\n    StoppedAtStation --> Running"
+  },
+  {
+    "prompt": "Sequence diagram for document signing: user uploads document, signing service generates token, user signs, service stores signed document.",
+    "diagram": "sequenceDiagram\n    User->>Service: Upload document\n    Service->>Signer: Generate signing token\n    User->>Signer: Sign document\n    Signer->>Service: Return signed copy\n    Service-->>User: Document signed"
+  },
+  {
+    "prompt": "Class diagram of airline reservation: Flight, Passenger, Ticket, Payment. Ticket links passenger and flight, payment refers to ticket.",
+    "diagram": "classDiagram\n    Passenger --> Ticket\n    Flight --> Ticket\n    Ticket --> Payment\n    class Passenger { name; passport }\n    class Flight { code; origin; destination }\n    class Ticket { seat }\n    class Payment { amount; method }"
+  },
+  {
+    "prompt": "Activity diagram for performing data import: select file, validate format, import records, generate summary.",
+    "diagram": "flowchart TD\n    A[Select file] --> B[Validate format]\n    B --> C[Import records]\n    C --> D[Generate summary]"
+  },
+  {
+    "prompt": "State diagram for electric scooter rental: Available, Reserved, InUse, Charging, Maintenance.",
+    "diagram": "stateDiagram\n    Available --> Reserved\n    Reserved --> InUse\n    InUse --> Available\n    InUse --> Charging\n    Charging --> Available\n    Available --> Maintenance"
+  },
+  {
+    "prompt": "Sequence diagram for remote work onboarding: HR submits employee data, system creates accounts, sends welcome notices.",
+    "diagram": "sequenceDiagram\n    HR->>System: Create new employee\n    System->>Directory: Provision accounts\n    System->>EmailService: Send welcome email"
+  },
+  {
+    "prompt": "Class diagram for a fitness app with Workout, Exercise, User, ProgressLog. Exercises belong to workouts, logs track user progress.",
+    "diagram": "classDiagram\n    Workout --> Exercise\n    User --> ProgressLog\n    Exercise --> ProgressLog\n    class User { id; name }\n    class Workout { title }\n    class Exercise { name; reps }\n    class ProgressLog { date; notes }"
+  },
+  {
+    "prompt": "Activity diagram for firmware update: check version, download, apply update, reboot.",
+    "diagram": "flowchart TD\n    A[Check version] --> B[Download update]\n    B --> C[Apply update]\n    C --> D[Reboot]"
+  },
+  {
+    "prompt": "Sequence diagram for IoT home temperature monitoring: sensor reports reading, gateway stores it, user app displays temperature.",
+    "diagram": "sequenceDiagram\n    Sensor->>Gateway: Temperature reading\n    Gateway->>Database: Store data\n    App->>Gateway: Request latest\n    Gateway-->>App: Temperature value"
+  },
+  {
+    "prompt": "Class diagram for point-of-sale retail with Register, Cashier, Transaction, Item. Transactions contain items and are processed by a cashier at a register.",
+    "diagram": "classDiagram\n    Register --> Transaction\n    Cashier --> Transaction\n    Transaction --> Item\n    class Register { id }\n    class Cashier { name }\n    class Transaction { timestamp }\n    class Item { sku; price }"
+  },
+  {
+    "prompt": "State diagram for a drone flight: Grounded, Takeoff, Cruising, Landing.",
+    "diagram": "stateDiagram\n    Grounded --> Takeoff\n    Takeoff --> Cruising\n    Cruising --> Landing\n    Landing --> Grounded"
+  },
+  {
+    "prompt": "Activity diagram for renting equipment: select item, verify availability, sign agreement, start rental.",
+    "diagram": "flowchart TD\n    A[Select item] --> B[Verify availability]\n    B --> C[Sign agreement]\n    C --> D[Start rental]"
+  },
+  {
+    "prompt": "Sequence diagram where a student submits assignment, LMS checks plagiarism service, stores submission, teacher notified.",
+    "diagram": "sequenceDiagram\n    Student->>LMS: Submit assignment\n    LMS->>PlagiarismService: Check\n    PlagiarismService-->>LMS: Report\n    LMS->>Database: Store\n    LMS->>Teacher: Notify"
+  },
+  {
+    "prompt": "Class diagram for hiring system: Applicant, JobPosting, Interview, Offer. Interviews link applicant to a posting and offers follow successful interviews.",
+    "diagram": "classDiagram\n    Applicant --> Interview\n    JobPosting --> Interview\n    Applicant --> Offer\n    JobPosting --> Offer\n    class Applicant { name }\n    class JobPosting { title }\n    class Interview { date }\n    class Offer { salary }"
+  },
+  {
+    "prompt": "State diagram for print job: Queued, Printing, Completed, Failed.",
+    "diagram": "stateDiagram\n    Queued --> Printing\n    Printing --> Completed\n    Printing --> Failed"
+  },
+  {
+    "prompt": "Sequence diagram for a user updating profile picture: user uploads new image, server optimizes, stores, updates profile.",
+    "diagram": "sequenceDiagram\n    User->>Server: Upload new image\n    Server->>ImageProcessor: Optimize\n    ImageProcessor-->>Server: Optimized asset\n    Server->>Database: Update profile"
+  },
+  {
+    "prompt": "Activity diagram for resolving a customer complaint: receive complaint, assign agent, investigate, provide resolution.",
+    "diagram": "flowchart TD\n    A[Receive complaint] --> B[Assign agent]\n    B --> C[Investigate]\n    C --> D[Provide resolution]"
+  },
+  {
+    "prompt": "Class diagram for logistics warehouse: Shelf, Product, StockEntry, Supplier. Stock entries record supplier deliveries to shelves.",
+    "diagram": "classDiagram\n    Supplier --> StockEntry\n    Shelf --> StockEntry\n    Product --> StockEntry\n    class Shelf { code }\n    class Supplier { name }\n    class Product { sku; name }\n    class StockEntry { quantity; date }"
+  },
+  {
+    "prompt": "State diagram for video encoding job: Pending, Encoding, Completed, Canceled.",
+    "diagram": "stateDiagram\n    Pending --> Encoding\n    Encoding --> Completed\n    Encoding --> Canceled"
+  },
+  {
+    "prompt": "Sequence diagram for cryptocurrency transaction: wallet signs transaction, node verifies, blockchain records, confirmation sent.",
+    "diagram": "sequenceDiagram\n    Wallet->>Node: Signed transaction\n    Node->>Blockchain: Verify & append\n    Blockchain-->>Node: Confirmed\n    Node-->>Wallet: Confirmation"
+  },
+  {
+    "prompt": "Activity diagram for insurance claim: receive claim, validate policy, review evidence, approve or reject.",
+    "diagram": "flowchart TD\n    A[Receive claim] --> B[Validate policy]\n    B --> C[Review evidence]\n    C -->|Approved| D[Approve]\n    C -->|Rejected| E[Reject]"
+  },
+  {
+    "prompt": "Class diagram for zoo management: Animal, Species, Zookeeper, FeedingSchedule. Schedules link keepers and animals.",
+    "diagram": "classDiagram\n    Species --> Animal\n    Zookeeper --> FeedingSchedule\n    Animal --> FeedingSchedule\n    class Animal { name; age }\n    class Species { type }\n    class Zookeeper { name }\n    class FeedingSchedule { time }"
+  },
+  {
+    "prompt": "Sequence diagram showing automated daily report: scheduler triggers system, system queries DB, generates report, emails stakeholders.",
+    "diagram": "sequenceDiagram\n    Scheduler->>ReportingSystem: Start job\n    ReportingSystem->>Database: Query data\n    ReportingSystem-->>Scheduler: Generated report\n    ReportingSystem->>EmailService: Send report"
+  },
+  {
+    "prompt": "State diagram for online multiplayer game connection: Disconnected, Connecting, Lobby, InMatch, Disconnected.",
+    "diagram": "stateDiagram\n    Disconnected --> Connecting\n    Connecting --> Lobby\n    Lobby --> InMatch\n    InMatch --> Lobby\n    Lobby --> Disconnected"
+  },
+  {
+    "prompt": "Activity diagram for reviewing research paper: write draft, run checks, submit, receive reviewer feedback, revise.",
+    "diagram": "flowchart TD\n    A[Write draft] --> B[Run checks]\n    B --> C[Submit]\n    C --> D[Receive review]\n    D --> E[Revise draft]"
+  },
+  {
+    "prompt": "Class diagram for package courier system: Courier, Recipient, Package, DeliveryRecord. Records log package delivery attempts.",
+    "diagram": "classDiagram\n    Courier --> DeliveryRecord\n    Package --> DeliveryRecord\n    Recipient --> DeliveryRecord\n    class Courier { name }\n    class Recipient { name }\n    class Package { trackingId }\n    class DeliveryRecord { timestamp; status }"
+  },
+  {
+    "prompt": "Sequence diagram for passwordless login: user requests login, server sends token email, user clicks link, server verifies.",
+    "diagram": "sequenceDiagram\n    User->>Server: Request login\n    Server->>EmailService: Send token\n    User->>Server: Click link\n    Server-->>User: Authenticated"
+  },
+  {
+    "prompt": "Activity diagram for preparing for travel: check passport, book flights, book hotel, pack luggage.",
+    "diagram": "flowchart TD\n    A[Check passport] --> B[Book flights]\n    B --> C[Book hotel]\n    C --> D[Pack luggage]"
+  },
+  {
+    "prompt": "State diagram for music streaming: Stopped, Playing, Paused, Buffering.",
+    "diagram": "stateDiagram\n    Stopped --> Playing\n    Playing --> Paused\n    Paused --> Playing\n    Playing --> Buffering\n    Buffering --> Playing"
+  },
+  {
+    "prompt": "Class diagram for online medical consultation with Doctor, Patient, Appointment, Payment. Appointments link doctors and patients; payments reference appointments.",
+    "diagram": "classDiagram\n    Doctor --> Appointment\n    Patient --> Appointment\n    Appointment --> Payment\n    class Doctor { name; specialty }\n    class Patient { name }\n    class Appointment { date; time }\n    class Payment { amount }"
+  },
+  {
+    "prompt": "Sequence diagram for e-learning content access: user opens lesson, server checks subscription, retrieves content, sends to user.",
+    "diagram": "sequenceDiagram\n    User->>Server: Open lesson\n    Server->>SubscriptionService: Validate access\n    SubscriptionService-->>Server: Allowed\n    Server->>Database: Retrieve content\n    Server-->>User: Deliver"
+  },
+  {
+    "prompt": "Activity diagram for manufacturing assembly line: receive materials, assemble components, inspect product, package, ship.",
+    "diagram": "flowchart TD\n    A[Receive materials] --> B[Assemble]\n    B --> C[Inspect]\n    C --> D[Package]\n    D --> E[Ship]"
+  },
+  {
+    "prompt": "State diagram for old-style phone call: Idle, Dialing, Ringing, Connected, Ended.",
+    "diagram": "stateDiagram\n    Idle --> Dialing\n    Dialing --> Ringing\n    Ringing --> Connected\n    Connected --> Ended\n    Ended --> Idle"
+  },
+  {
+    "prompt": "Class diagram for car insurance: Policy, Vehicle, InsuredParty, Claim. Claims reference policy and insured party.",
+    "diagram": "classDiagram\n    Policy --> Claim\n    InsuredParty --> Claim\n    Vehicle --> Policy\n    class Policy { number }\n    class Vehicle { plate; model }\n    class InsuredParty { name }\n    class Claim { date; amount }"
+  },
+  {
+    "prompt": "Sequence diagram for multi-factor authentication: user logs in, system validates password, sends SMS code, user confirms code.",
+    "diagram": "sequenceDiagram\n    User->>System: Login\n    System->>DB: Validate password\n    System->>SMSService: Send code\n    User->>System: Enter code\n    System-->>User: Logged in"
+  },
+  {
+    "prompt": "Create a class diagram for a Gym membership system including Member, Subscription, Trainer, TrainingSession, and Payment classes with basic attributes and relationships.",
+    "diagram": "classDiagram\n    class Member {\n        +id: int\n        +name: string\n        +email: string\n    }\n    class Subscription {\n        +type: string\n        +startDate: date\n        +endDate: date\n    }\n    class Trainer {\n        +id: int\n        +name: string\n    }\n    class TrainingSession {\n        +sessionId: int\n        +date: date\n        +duration: int\n    }\n    class Payment {\n        +paymentId: int\n        +amount: float\n        +date: date\n    }\n    Member --> Subscription\n    Member --> \"many\" TrainingSession\n    TrainingSession --> Trainer\n    Member --> \"many\" Payment"
+  },
+  {
+    "prompt": "Generate a sequence diagram describing a hotel booking process involving Customer, BookingSystem, PaymentGateway, and ConfirmationEmail.",
+    "diagram": "sequenceDiagram\n    participant Customer\n    participant BookingSystem\n    participant PaymentGateway\n    participant ConfirmationEmail\n\n    Customer ->> BookingSystem: Search rooms\n    BookingSystem ->> BookingSystem: Check availability\n    Customer ->> BookingSystem: Confirm reservation\n    BookingSystem ->> PaymentGateway: Process payment\n    PaymentGateway -->> BookingSystem: Payment approved\n    BookingSystem ->> ConfirmationEmail: Send booking confirmation\n    ConfirmationEmail -->> Customer: Receive confirmation"
+  },
+  {
+    "prompt": "Create a state diagram of a loan request process including Submitted, UnderReview, Approved, Rejected, and Funded.",
+    "diagram": "stateDiagram-v2\n    [*] --> Submitted\n    Submitted --> UnderReview\n    UnderReview --> Approved\n    UnderReview --> Rejected\n    Approved --> Funded\n    Rejected --> [*]\n    Funded --> [*]"
+  },
+  {
+    "prompt": "Design an ER diagram for a digital library system with Book, Author, Publisher, Loan, and Member entities.",
+    "diagram": "erDiagram\n    BOOK {\n        int book_id\n        string title\n        int publication_year\n    }\n    AUTHOR {\n        int author_id\n        string name\n    }\n    PUBLISHER {\n        int publisher_id\n        string name\n    }\n    MEMBER {\n        int member_id\n        string name\n    }\n    LOAN {\n        int loan_id\n        date loan_date\n    }\n    AUTHOR ||--o{ BOOK : writes\n    PUBLISHER ||--o{ BOOK : publishes\n    BOOK ||--o{ LOAN : borrowed\n    MEMBER ||--o{ LOAN : borrows"
+  },
+  {
+    "prompt": "Create a class diagram for a vehicle rental company including Vehicle, Customer, RentalContract, and Invoice.",
+    "diagram": "classDiagram\n    class Vehicle {\n        +plateNumber: string\n        +model: string\n        +available: bool\n    }\n    class Customer {\n        +customerId: int\n        +name: string\n    }\n    class RentalContract {\n        +contractId: int\n        +startDate: date\n        +endDate: date\n    }\n    class Invoice {\n        +invoiceId: int\n        +total: float\n    }\n    Customer --> \"many\" RentalContract\n    RentalContract --> Vehicle\n    RentalContract --> Invoice"
+  },
+  {
+    "prompt": "Make a sequence diagram that shows the purchase of digital content including User, OnlineStore, DRMServer, and EmailService.",
+    "diagram": "sequenceDiagram\n    participant User\n    participant OnlineStore\n    participant DRMServer\n    participant EmailService\n\n    User ->> OnlineStore: Browse products\n    User ->> OnlineStore: Purchase content\n    OnlineStore ->> DRMServer: License validation\n    DRMServer -->> OnlineStore: License approved\n    OnlineStore ->> EmailService: Send product download link\n    EmailService -->> User: Delivery email"
+  },
+  {
+    "prompt": "Create a state diagram of a support ticket with states New, Assigned, WaitingForCustomer, Resolved, and Closed.",
+    "diagram": "stateDiagram-v2\n    [*] --> New\n    New --> Assigned\n    Assigned --> WaitingForCustomer\n    WaitingForCustomer --> Assigned\n    Assigned --> Resolved\n    Resolved --> Closed\n    Closed --> [*]"
+  },
+  {
+    "prompt": "Generate an ER diagram for a charity management system including Donor, Donation, Campaign, Volunteer, and Event.",
+    "diagram": "erDiagram\n    DONOR {\n        int donor_id\n        string name\n    }\n    DONATION {\n        int donation_id\n        float amount\n    }\n    CAMPAIGN {\n        int campaign_id\n        string title\n    }\n    VOLUNTEER {\n        int volunteer_id\n        string name\n    }\n    EVENT {\n        int event_id\n        string date\n    }\n    DONOR ||--o{ DONATION : gives\n    CAMPAIGN ||--o{ DONATION : receives\n    CAMPAIGN ||--o{ EVENT : includes\n    VOLUNTEER ||--o{ EVENT : assists"
+  },
+  {
+    "prompt": "Create a class diagram for a library kiosk with classes User, BookScanner, Database, Librarian, and CheckoutRecord.",
+    "diagram": "classDiagram\n    class User {\n        +id: int\n        +name: string\n    }\n    class BookScanner {\n        +scanBarcode()\n    }\n    class Database {\n        +storeRecord()\n        +lookupBook()\n    }\n    class Librarian {\n        +approveCheckout()\n    }\n    class CheckoutRecord {\n        +recordId: int\n    }\n    User --> CheckoutRecord\n    CheckoutRecord --> Database\n    BookScanner --> Database\n    Librarian --> CheckoutRecord"
+  },
+  {
+    "prompt": "Create a sequence diagram for user registration in a job portal involving Candidate, PortalSystem, EmailServer, and ResumeDatabase.",
+    "diagram": "sequenceDiagram\n    participant Candidate\n    participant PortalSystem\n    participant ResumeDatabase\n    participant EmailServer\n\n    Candidate ->> PortalSystem: Create account\n    PortalSystem ->> ResumeDatabase: Store user profile\n    ResumeDatabase -->> PortalSystem: Profile stored\n    PortalSystem ->> EmailServer: Send verification\n    EmailServer -->> Candidate: Verification email"
+  },
+  {
+    "prompt": "Draw a state diagram for an access card system with states Inactive, Active, Blocked, Revoked, and Expired.",
+    "diagram": "stateDiagram-v2\n    [*] --> Inactive\n    Inactive --> Active\n    Active --> Blocked\n    Active --> Expired\n    Blocked --> Active\n    Active --> Revoked\n    Revoked --> [*]\n    Expired --> [*]"
+  },
+  {
+    "prompt": "Build an ER diagram for a recipe sharing website including User, Recipe, Review, Ingredient, and Category.",
+    "diagram": "erDiagram\n    USER {\n        int user_id\n        string name\n    }\n    RECIPE {\n        int recipe_id\n        string title\n    }\n    REVIEW {\n        int review_id\n        string comment\n    }\n    INGREDIENT {\n        int ingredient_id\n        string name\n    }\n    CATEGORY {\n        int category_id\n        string name\n    }\n    USER ||--o{ RECIPE : creates\n    RECIPE ||--o{ REVIEW : has\n    USER ||--o{ REVIEW : writes\n    RECIPE ||--o{ INGREDIENT : includes\n    CATEGORY ||--o{ RECIPE : contains"
+  },
+  {
+    "prompt": "Create a class diagram for a parcel tracking service including Parcel, TrackingEvent, Customer, Courier, and DeliveryVehicle.",
+    "diagram": "classDiagram\n    class Parcel {\n        +parcelId: string\n    }\n    class TrackingEvent {\n        +timestamp: datetime\n        +location: string\n    }\n    class Customer {\n        +customerId: int\n        +name: string\n    }\n    class Courier {\n        +id: int\n        +name: string\n    }\n    class DeliveryVehicle {\n        +plateNumber: string\n        +type: string\n    }\n    Parcel --> \"many\" TrackingEvent\n    Customer --> Parcel\n    Courier --> DeliveryVehicle\n    Parcel --> Courier"
+  },
+  {
+    "prompt": "Make a sequence diagram that shows a ride request flow between Passenger, RideApp, Driver, and PaymentSystem.",
+    "diagram": "sequenceDiagram\n    participant Passenger\n    participant RideApp\n    participant Driver\n    participant PaymentSystem\n\n    Passenger ->> RideApp: Request ride\n    RideApp ->> Driver: Offer ride\n    Driver -->> RideApp: Accept ride\n    RideApp -->> Passenger: Driver assigned\n    Passenger ->> RideApp: Complete trip\n    RideApp ->> PaymentSystem: Charge passenger\n    PaymentSystem -->> RideApp: Payment confirmed"
+  },
+  {
+    "prompt": "Draw a state diagram for a washing machine including states Idle, Filling, Washing, Rinsing, Spinning, Completed, and Error.",
+    "diagram": "stateDiagram-v2\n    [*] --> Idle\n    Idle --> Filling\n    Filling --> Washing\n    Washing --> Rinsing\n    Rinsing --> Spinning\n    Spinning --> Completed\n    Washing --> Error\n    Rinsing --> Error\n    Spinning --> Error\n    Completed --> [*]\n    Error --> [*]"
+  },
+  {
+    "prompt": "Create an ER diagram for a photo gallery app with Photographer, Album, Photo, Tag, and Comment.",
+    "diagram": "erDiagram\n    PHOTOGRAPHER {\n        int id\n        string name\n    }\n    ALBUM {\n        int album_id\n        string title\n    }\n    PHOTO {\n        int photo_id\n        string file_path\n    }\n    COMMENT {\n        int comment_id\n        string text\n    }\n    TAG {\n        int tag_id\n        string name\n    }\n    PHOTOGRAPHER ||--o{ ALBUM : owns\n    ALBUM ||--o{ PHOTO : contains\n    PHOTO ||--o{ COMMENT : receives\n    PHOTO ||--o{ TAG : labeled"
+  },
+  {
+    "prompt": "Create a class diagram for a warehouse inventory system including InventoryItem, Warehouse, Supplier, StockMovement, and PurchaseOrder.",
+    "diagram": "classDiagram\n    class InventoryItem {\n        +itemId: int\n        +name: string\n        +quantity: int\n    }\n    class Warehouse {\n        +location: string\n    }\n    class Supplier {\n        +supplierId: int\n        +name: string\n    }\n    class StockMovement {\n        +date: date\n        +quantity: int\n    }\n    class PurchaseOrder {\n        +orderId: int\n        +orderDate: date\n    }\n    Warehouse --> \"many\" InventoryItem\n    InventoryItem --> \"many\" StockMovement\n    Supplier --> \"many\" PurchaseOrder\n    PurchaseOrder --> InventoryItem"
+  },
+  {
+    "prompt": "Make a sequence diagram for a smart door lock system involving Resident, MobileApp, SmartLock, and CloudServer.",
+    "diagram": "sequenceDiagram\n    participant Resident\n    participant MobileApp\n    participant CloudServer\n    participant SmartLock\n\n    Resident ->> MobileApp: Unlock door command\n    MobileApp ->> CloudServer: Validate credentials\n    CloudServer -->> MobileApp: Auth success\n    MobileApp ->> SmartLock: Send open signal\n    SmartLock -->> Resident: Door unlocked"
+  },
+  {
+    "prompt": "Draw a state diagram for a smart thermostat including states Off, Heating, Cooling, Idle, and Error.",
+    "diagram": "stateDiagram-v2\n    [*] --> Off\n    Off --> Heating\n    Off --> Cooling\n    Heating --> Idle\n    Cooling --> Idle\n    Idle --> Heating\n    Idle --> Cooling\n    Heating --> Error\n    Cooling --> Error\n    Error --> [*]"
+  },
+  {
+    "prompt": "Develop an ER diagram for a home insurance system including PolicyHolder, Policy, Claim, Adjuster, and DamageAssessment.",
+    "diagram": "erDiagram\n    POLICYHOLDER {\n        int id\n        string name\n    }\n    POLICY {\n        int policy_id\n        string coverage\n    }\n    CLAIM {\n        int claim_id\n        date filed_date\n    }\n    ADJUSTER {\n        int adjuster_id\n        string name\n    }\n    DAMAGEASSESSMENT {\n        int assess_id\n        string details\n    }\n    POLICYHOLDER ||--o{ POLICY : owns\n    POLICY ||--o{ CLAIM : receives\n    ADJUSTER ||--o{ CLAIM : assigned\n    CLAIM ||--o{ DAMAGEASSESSMENT : documented"
+  },
+  {
+    "prompt": "Create a class diagram for a car repair shop system including Vehicle, Mechanic, RepairOrder, Part, and Invoice.",
+    "diagram": "classDiagram\n    class Vehicle {\n        +plate: string\n        +model: string\n    }\n    class Mechanic {\n        +id: int\n        +name: string\n    }\n    class RepairOrder {\n        +orderId: int\n        +issue: string\n    }\n    class Part {\n        +partNumber: string\n        +cost: float\n    }\n    class Invoice {\n        +invoiceId: int\n        +totalAmount: float\n    }\n    Vehicle --> \"many\" RepairOrder\n    Mechanic --> \"many\" RepairOrder\n    RepairOrder --> \"many\" Part\n    RepairOrder --> Invoice"
+  },
+  {
+    "prompt": "Create a sequence diagram for a music streaming service login including User, MobileApp, AuthServer, and SubscriptionDatabase.",
+    "diagram": "sequenceDiagram\n    participant User\n    participant MobileApp\n    participant AuthServer\n    participant SubscriptionDatabase\n\n    User ->> MobileApp: Enter credentials\n    MobileApp ->> AuthServer: Authenticate\n    AuthServer ->> SubscriptionDatabase: Check subscription\n    SubscriptionDatabase -->> AuthServer: Valid subscription\n    AuthServer -->> MobileApp: Auth success\n    MobileApp -->> User: Login confirmed"
+  },
+  {
+    "prompt": "Draw a workflow state diagram for a book publishing process including Draft, Editing, Proofreading, Approved, and Published.",
+    "diagram": "stateDiagram-v2\n    [*] --> Draft\n    Draft --> Editing\n    Editing --> Proofreading\n    Proofreading --> Approved\n    Approved --> Published\n    Published --> [*]"
+  },
+  {
+    "prompt": "Produce an ER diagram for an online fitness program including User, WorkoutSession, Exercise, Trainer, and ProgressLog.",
+    "diagram": "erDiagram\n    USER {\n        int user_id\n        string name\n    }\n    WORKOUTSESSION {\n        int session_id\n        date session_date\n    }\n    EXERCISE {\n        int exercise_id\n        string name\n    }\n    TRAINER {\n        int trainer_id\n        string name\n    }\n    PROGRESSLOG {\n        int log_id\n        string notes\n    }\n    USER ||--o{ WORKOUTSESSION : attends\n    WORKOUTSESSION ||--o{ EXERCISE : includes\n    TRAINER ||--o{ WORKOUTSESSION : coaches\n    USER ||--o{ PROGRESSLOG : updates"
+  },
+  {
+    "prompt": "Create a class diagram for a job scheduling system including Job, Scheduler, WorkerNode, ExecutionAttempt, and LogEntry.",
+    "diagram": "classDiagram\n    class Job {\n        +jobId: int\n        +priority: int\n    }\n    class Scheduler {\n        +assignJob()\n    }\n    class WorkerNode {\n        +nodeId: int\n        +status: string\n    }\n    class ExecutionAttempt {\n        +attemptId: int\n        +timestamp: datetime\n    }\n    class LogEntry {\n        +message: string\n        +time: datetime\n    }\n    Scheduler --> Job\n    Job --> \"many\" ExecutionAttempt\n    ExecutionAttempt --> WorkerNode\n    ExecutionAttempt --> \"many\" LogEntry"
+  },
+  {
+    "prompt": "Make a sequence diagram for an online appointment scheduling platform involving Client, SchedulingPortal, Expert, and NotificationService.",
+    "diagram": "sequenceDiagram\n    participant Client\n    participant SchedulingPortal\n    participant Expert\n    participant NotificationService\n\n    Client ->> SchedulingPortal: Request appointment\n    SchedulingPortal ->> Expert: Check availability\n    Expert -->> SchedulingPortal: Available\n    SchedulingPortal -->> Client: Confirm time\n    SchedulingPortal ->> NotificationService: Send appointment notification\n    NotificationService -->> Expert: Appointment booked"
+  },
+  {
+    "prompt": "Draw a state diagram for a podcast publishing workflow including Recording, Editing, Mixing, Review, Scheduled, and Published.",
+    "diagram": "stateDiagram-v2\n    [*] --> Recording\n    Recording --> Editing\n    Editing --> Mixing\n    Mixing --> Review\n    Review --> Scheduled\n    Scheduled --> Published\n    Published --> [*]"
+  },
+  {
+    "prompt": "Create an ER diagram for a veterinary clinic system including Pet, Owner, Appointment, Treatment, and Veterinarian.",
+    "diagram": "erDiagram\n    PET {\n        int pet_id\n        string name\n    }\n    OWNER {\n        int owner_id\n        string name\n    }\n    APPOINTMENT {\n        int app_id\n        date date\n    }\n    TREATMENT {\n        int treat_id\n        string description\n    }\n    VETERINARIAN {\n        int vet_id\n        string name\n    }\n    OWNER ||--o{ PET : owns\n    PET ||--o{ APPOINTMENT : attends\n    VETERINARIAN ||--o{ APPOINTMENT : handles\n    APPOINTMENT ||--o{ TREATMENT : includes"
+  },
+  {
+    "prompt": "Create a class diagram for an art gallery management system with Artist, Artwork, Exhibition, Visitor, and Ticket.",
+    "diagram": "classDiagram\n    class Artist {\n        +artistId: int\n        +name: string\n    }\n    class Artwork {\n        +artId: int\n        +title: string\n    }\n    class Exhibition {\n        +exhibitionId: int\n        +startDate: date\n    }\n    class Visitor {\n        +visitorId: int\n        +name: string\n    }\n    class Ticket {\n        +ticketId: int\n        +price: float\n    }\n    Artist --> \"many\" Artwork\n    Exhibition --> \"many\" Artwork\n    Visitor --> \"many\" Ticket\n    Ticket --> Exhibition"
+  },
+  {
+    "prompt": "Make a sequence diagram for a corporate VPN login involving Employee, VPNClient, AuthServer, and AccessMonitor.",
+    "diagram": "sequenceDiagram\n    participant Employee\n    participant VPNClient\n    participant AuthServer\n    participant AccessMonitor\n\n    Employee ->> VPNClient: Enter credentials\n    VPNClient ->> AuthServer: Authenticate user\n    AuthServer -->> VPNClient: Authentication success\n    VPNClient ->> AccessMonitor: Log access session\n    AccessMonitor -->> VPNClient: Logged successfully"
+  },
+  {
+    "prompt": "Draw a state diagram for a 3D print job including states Submitted, Slicing, Printing, Cooling, Completed, and Failed.",
+    "diagram": "stateDiagram-v2\n    [*] --> Submitted\n    Submitted --> Slicing\n    Slicing --> Printing\n    Printing --> Cooling\n    Cooling --> Completed\n    Printing --> Failed\n    Slicing --> Failed\n    Completed --> [*]\n    Failed --> [*]"
+  },
+  {
+    "prompt": "Generate an ER diagram for a social fundraising platform including User, Fundraiser, Donation, Message, and Update.",
+    "diagram": "erDiagram\n    USER {\n        int user_id\n        string name\n    }\n    FUNDRAISER {\n        int fund_id\n        string title\n    }\n    DONATION {\n        int donation_id\n        float amount\n    }\n    MESSAGE {\n        int message_id\n        string content\n    }\n    UPDATE {\n        int update_id\n        string details\n    }\n    USER ||--o{ FUNDRAISER : creates\n    USER ||--o{ DONATION : makes\n    FUNDRAISER ||--o{ DONATION : receives\n    USER ||--o{ MESSAGE : sends\n    FUNDRAISER ||--o{ UPDATE : posts"
+  },
+  {
+    "prompt": "Create a class diagram for a container shipping system including Container, Ship, Port, ShipmentOrder, and TrackingEntry.",
+    "diagram": "classDiagram\n    class Container {\n        +containerId: string\n        +status: string\n    }\n    class Ship {\n        +shipId: int\n        +name: string\n    }\n    class Port {\n        +portId: int\n        +location: string\n    }\n    class ShipmentOrder {\n        +orderId: int\n        +date: date\n    }\n    class TrackingEntry {\n        +timestamp: datetime\n        +location: string\n    }\n    Container --> \"many\" TrackingEntry\n    ShipmentOrder --> Container\n    Container --> Ship\n    TrackingEntry --> Port"
+  },
+  {
+    "prompt": "Create a sequence diagram for ordering takeout through a mobile app involving Customer, FoodApp, Restaurant, and PaymentService.",
+    "diagram": "sequenceDiagram\n    participant Customer\n    participant FoodApp\n    participant Restaurant\n    participant PaymentService\n\n    Customer ->> FoodApp: Place order\n    FoodApp ->> Restaurant: Submit order\n    Restaurant -->> FoodApp: Accept order\n    FoodApp ->> PaymentService: Process payment\n    PaymentService -->> FoodApp: Payment confirmed\n    FoodApp -->> Customer: Order confirmation"
+  },
+  {
+    "prompt": "Draw a state diagram for a server instance lifecycle including Provisioning, Running, Scaling, Terminating, and Terminated.",
+    "diagram": "stateDiagram-v2\n    [*] --> Provisioning\n    Provisioning --> Running\n    Running --> Scaling\n    Scaling --> Running\n    Running --> Terminating\n    Terminating --> Terminated\n    Terminated --> [*]"
+  },
+  {
+    "prompt": "Generate an ER diagram for an academic paper publishing system including Author, Paper, Review, Conference, and Topic.",
+    "diagram": "erDiagram\n    AUTHOR {\n        int author_id\n        string name\n    }\n    PAPER {\n        int paper_id\n        string title\n    }\n    REVIEW {\n        int review_id\n        string comments\n    }\n    CONFERENCE {\n        int conf_id\n        string name\n    }\n    TOPIC {\n        int topic_id\n        string name\n    }\n    AUTHOR ||--o{ PAPER : writes\n    PAPER ||--o{ REVIEW : receives\n    CONFERENCE ||--o{ PAPER : hosts\n    PAPER ||--o{ TOPIC : related"
+  },
+  {
+    "prompt": "Create a class diagram for a medical appointment scheduling system including Doctor, Patient, Appointment, ClinicRoom, and Bill.",
+    "diagram": "classDiagram\n    class Doctor {\n        +doctorId: int\n        +name: string\n    }\n    class Patient {\n        +patientId: int\n        +name: string\n    }\n    class Appointment {\n        +appointmentId: int\n        +date: date\n    }\n    class ClinicRoom {\n        +roomNumber: int\n    }\n    class Bill {\n        +billId: int\n        +amount: float\n    }\n    Doctor --> \"many\" Appointment\n    Patient --> \"many\" Appointment\n    Appointment --> ClinicRoom\n    Appointment --> Bill"
+  },
+  {
+    "prompt": "Make a sequence diagram for a logistics tracking system involving Seller, ShippingCompany, TrackingAPI, and Customer.",
+    "diagram": "sequenceDiagram\n    participant Seller\n    participant ShippingCompany\n    participant TrackingAPI\n    participant Customer\n\n    Seller ->> ShippingCompany: Schedule pickup\n    ShippingCompany ->> TrackingAPI: Generate tracking number\n    TrackingAPI -->> Seller: Provide tracking number\n    Seller ->> Customer: Send tracking number\n    Customer ->> TrackingAPI: Request package status\n    TrackingAPI -->> Customer: Status details"
+  },
+  {
+    "prompt": "Draw a state diagram for a subscription system including Trial, Active, Suspended, Cancelled, and Expired.",
+    "diagram": "stateDiagram-v2\n    [*] --> Trial\n    Trial --> Active\n    Active --> Suspended\n    Suspended --> Active\n    Active --> Cancelled\n    Active --> Expired\n    Cancelled --> [*]\n    Expired --> [*]"
+  },
+  {
+    "prompt": "Generate an ER diagram for a music concert ticketing system including Event, Performer, Ticket, Venue, and Seat.",
+    "diagram": "erDiagram\n    EVENT {\n        int event_id\n        string name\n    }\n    PERFORMER {\n        int performer_id\n        string name\n    }\n    TICKET {\n        int ticket_id\n        float price\n    }\n    VENUE {\n        int venue_id\n        string location\n    }\n    SEAT {\n        int seat_id\n        string row\n    }\n    EVENT ||--o{ PERFORMER : features\n    VENUE ||--o{ EVENT : hosts\n    EVENT ||--o{ TICKET : sells\n    SEAT ||--o{ TICKET : holds"
+  },
+  {
+    "prompt": "Create a class diagram for a drone delivery service including Drone, DeliveryTask, Operator, Route, and StatusUpdate.",
+    "diagram": "classDiagram\n    class Drone {\n        +droneId: int\n        +model: string\n    }\n    class DeliveryTask {\n        +taskId: int\n        +destination: string\n    }\n    class Operator {\n        +operatorId: int\n        +name: string\n    }\n    class Route {\n        +waypoints: string\n    }\n    class StatusUpdate {\n        +timestamp: datetime\n        +message: string\n    }\n    Operator --> \"many\" DeliveryTask\n    Drone --> \"many\" DeliveryTask\n    DeliveryTask --> Route\n    DeliveryTask --> \"many\" StatusUpdate"
+  },
+  {
+    "prompt": "Make a sequence diagram for reporting a lost credit card involving Customer, BankPortal, VerificationService, and CardIssuer.",
+    "diagram": "sequenceDiagram\n    participant Customer\n    participant BankPortal\n    participant VerificationService\n    participant CardIssuer\n\n    Customer ->> BankPortal: Report lost card\n    BankPortal ->> VerificationService: Validate identity\n    VerificationService -->> BankPortal: Verified\n    BankPortal ->> CardIssuer: Block and replace card\n    CardIssuer -->> Customer: Replacement card issued"
+  },
+  {
+    "prompt": "Create a state diagram for an employee onboarding system including ApplicationSubmitted, InterviewScheduled, Selected, Rejected, and Onboarded.",
+    "diagram": "stateDiagram-v2\n    [*] --> ApplicationSubmitted\n    ApplicationSubmitted --> InterviewScheduled\n    InterviewScheduled --> Selected\n    InterviewScheduled --> Rejected\n    Selected --> Onboarded\n    Onboarded --> [*]\n    Rejected --> [*]"
+  },
+  {
+    "prompt": "Design an ER diagram for a movie streaming system including User, Profile, Movie, WatchHistory, and Subscription.",
+    "diagram": "erDiagram\n    USER {\n        int user_id\n        string email\n    }\n    PROFILE {\n        int profile_id\n        string name\n    }\n    MOVIE {\n        int movie_id\n        string title\n    }\n    WATCHHISTORY {\n        int history_id\n        datetime timestamp\n    }\n    SUBSCRIPTION {\n        int sub_id\n        string type\n    }\n    USER ||--o{ PROFILE : owns\n    USER ||--o{ SUBSCRIPTION : has\n    PROFILE ||--o{ WATCHHISTORY : logs\n    WATCHHISTORY ||--o{ MOVIE : contains"
+  },
+  {
+    "prompt": "Create a class diagram for a cloud backup system including File, BackupJob, StorageNode, UserAccount, and RestoreRequest.",
+    "diagram": "classDiagram\n    class File {\n        +fileId: int\n        +name: string\n        +size: int\n    }\n    class BackupJob {\n        +jobId: int\n        +startTime: datetime\n    }\n    class StorageNode {\n        +nodeId: int\n        +location: string\n    }\n    class UserAccount {\n        +userId: int\n        +username: string\n    }\n    class RestoreRequest {\n        +requestId: int\n        +requestedAt: datetime\n    }\n    UserAccount --> \"many\" BackupJob\n    BackupJob --> \"many\" File\n    BackupJob --> StorageNode\n    UserAccount --> \"many\" RestoreRequest\n    RestoreRequest --> File"
+  },
+  {
+    "prompt": "Create a sequence diagram for a helpdesk support request involving Employee, HelpdeskPortal, SupportAgent, and TicketingDatabase.",
+    "diagram": "sequenceDiagram\n    participant Employee\n    participant HelpdeskPortal\n    participant SupportAgent\n    participant TicketingDatabase\n\n    Employee ->> HelpdeskPortal: Submit ticket\n    HelpdeskPortal ->> TicketingDatabase: Store ticket\n    TicketingDatabase -->> HelpdeskPortal: Ticket stored\n    HelpdeskPortal ->> SupportAgent: Assign ticket\n    SupportAgent -->> Employee: Initial response"
+  },
+  {
+    "prompt": "Create a state diagram for a content moderation process including Submitted, UnderReview, Approved, Rejected, and Flagged.",
+    "diagram": "stateDiagram-v2\n    [*] --> Submitted\n    Submitted --> UnderReview\n    UnderReview --> Approved\n    UnderReview --> Rejected\n    UnderReview --> Flagged\n    Approved --> [*]\n    Rejected --> [*]\n    Flagged --> UnderReview"
+  },
+  {
+    "prompt": "Generate an ER diagram for a course scheduling tool including Student, Course, Instructor, ClassSection, and Room.",
+    "diagram": "erDiagram\n    STUDENT {\n        int student_id\n        string name\n    }\n    COURSE {\n        int course_id\n        string title\n    }\n    INSTRUCTOR {\n        int instructor_id\n        string name\n    }\n    CLASSSECTION {\n        int section_id\n        string time_slot\n    }\n    ROOM {\n        int room_id\n        int capacity\n    }\n    COURSE ||--o{ CLASSSECTION : offered_as\n    INSTRUCTOR ||--o{ CLASSSECTION : teaches\n    CLASSSECTION ||--o{ STUDENT : attended_by\n    CLASSSECTION ||--o{ ROOM : held_in"
+  },
+  {
+    "prompt": "Create a class diagram for a stock trading platform including Trader, Portfolio, TradeOrder, MarketDataFeed, and TransactionRecord.",
+    "diagram": "classDiagram\n    class Trader {\n        +traderId: int\n        +name: string\n    }\n    class Portfolio {\n        +portfolioId: int\n        +value: float\n    }\n    class TradeOrder {\n        +orderId: int\n        +type: string\n    }\n    class MarketDataFeed {\n        +source: string\n    }\n    class TransactionRecord {\n        +transactionId: int\n        +timestamp: datetime\n    }\n    Trader --> Portfolio\n    Trader --> \"many\" TradeOrder\n    TradeOrder --> \"many\" TransactionRecord\n    MarketDataFeed --> TradeOrder"
+  },
+  {
+    "prompt": "Create a class diagram for a banking system with Customer, Account, and Transaction. A customer can have many accounts, and accounts have many transactions.",
+    "diagram": "classDiagram\n    class Customer {+id: int +name: string}\n    class Account {+accountNumber: string +balance: float}\n    class Transaction {+amount: float +date: date}\n    Customer \"1\" --> \"many\" Account\n    Account \"1\" --> \"many\" Transaction"
+  },
+  {
+    "prompt": "Make a sequence diagram where a mobile app requests product data from an API server, which retrieves it from a database and returns results.",
+    "diagram": "sequenceDiagram\n    App ->> API: Request product list\n    API ->> Database: Query products\n    Database -->> API: Product data\n    API -->> App: Return product list"
+  },
+  {
+    "prompt": "Create a state diagram for an online order that moves from Created to Paid to Packed to Shipped to Delivered.",
+    "diagram": "stateDiagram\n    Created --> Paid\n    Paid --> Packed\n    Packed --> Shipped\n    Shipped --> Delivered"
+  },
+  {
+    "prompt": "Make a flowchart for a hotel reservation where a user searches rooms, selects a room, enters details, and confirms the booking.",
+    "diagram": "flowchart TD\n    A[Search rooms] --> B[Select room]\n    B --> C[Enter guest details]\n    C --> D[Confirm booking]"
+  },
+  {
+    "prompt": "Create a class diagram for a school system with Student, Course, and Enrollment as a linking entity.",
+    "diagram": "classDiagram\n    class Student {+id: int +name: string}\n    class Course {+code: string +title: string}\n    class Enrollment {+grade: string}\n    Student \"many\" --> \"many\" Course : Enrollment"
+  },
+  {
+    "prompt": "Create a sequence diagram where a user uploads a file through a web client, which sends it to a server that stores it in cloud storage.",
+    "diagram": "sequenceDiagram\n    User ->> WebClient: Upload file\n    WebClient ->> Server: Transfer file\n    Server ->> CloudStorage: Store file\n    CloudStorage -->> Server: Confirmation\n    Server -->> WebClient: Upload success\n    WebClient -->> User: Notify completed"
+  },
+  {
+    "prompt": "Class diagram of a delivery platform with Driver, Vehicle, and DeliveryJob. A driver uses one vehicle and completes multiple delivery jobs.",
+    "diagram": "classDiagram\n    class Driver {+id: int +name: string}\n    class Vehicle {+plate: string +type: string}\n    class DeliveryJob {+jobId: int +status: string}\n    Driver --> Vehicle\n    Driver \"1\" --> \"many\" DeliveryJob"
+  },
+  {
+    "prompt": "State diagram for a support ticket that moves between Open, Assigned, InProgress, Resolved, and Closed.",
+    "diagram": "stateDiagram\n    Open --> Assigned\n    Assigned --> InProgress\n    InProgress --> Resolved\n    Resolved --> Closed"
+  },
+  {
+    "prompt": "Flowchart for returning a product: Submit request, evaluate eligibility, approve or deny.",
+    "diagram": "flowchart TD\n    A[Submit return request] --> B[Evaluate eligibility]\n    B -->|Approved| C[Return accepted]\n    B -->|Denied| D[Return rejected]"
+  },
+  {
+    "prompt": "Class diagram for Restaurant, Menu, MenuItem, and Order. Restaurant has one menu, menu has many items, orders contain items.",
+    "diagram": "classDiagram\n    class Restaurant {+name: string}\n    class Menu {}\n    class MenuItem {+name: string +price: float}\n    class Order {+orderId: int}\n    Restaurant --> Menu\n    Menu \"1\" --> \"many\" MenuItem\n    Order \"many\" --> \"many\" MenuItem"
+  },
+  {
+    "prompt": "Sequence diagram where a desktop app logs into a service which checks credentials and returns a session token.",
+    "diagram": "sequenceDiagram\n    App ->> AuthService: Submit credentials\n    AuthService ->> Database: Validate user\n    Database -->> AuthService: Valid\n    AuthService -->> App: Session token"
+  },
+  {
+    "prompt": "State diagram for a shipment that can be NotStarted, Processing, InTransit, Delayed, and Delivered.",
+    "diagram": "stateDiagram\n    NotStarted --> Processing\n    Processing --> InTransit\n    InTransit --> Delivered\n    InTransit --> Delayed\n    Delayed --> Delivered"
+  },
+  {
+    "prompt": "Class diagram of a library with Member, Loan, and Book. A member can borrow many books using loans.",
+    "diagram": "classDiagram\n    class Member {+id: int +name: string}\n    class Book {+isbn: string +title: string}\n    class Loan {+loanDate: date +dueDate: date}\n    Member \"1\" --> \"many\" Loan\n    Loan --> Book"
+  },
+  {
+    "prompt": "Flowchart of an app registration: User enters details, system checks if email exists, if yes ask to retry else create account.",
+    "diagram": "flowchart TD\n    A[Enter details] --> B[Check email exists]\n    B -->|Exists| C[Ask user to retry]\n    B -->|Not exists| D[Create account]"
+  },
+  {
+    "prompt": "Sequence diagram for an e-commerce checkout where the site sends payment data to a gateway which confirms and updates order status.",
+    "diagram": "sequenceDiagram\n    User ->> Shop: Checkout\n    Shop ->> PaymentGateway: Send payment\n    PaymentGateway -->> Shop: Payment successful\n    Shop -->> User: Order confirmed"
+  },
+  {
+    "prompt": "Class diagram for Inventory, Product, and Supplier. Products are supplied by suppliers and stored in inventory records.",
+    "diagram": "classDiagram\n    class Supplier {+id: int +name: string}\n    class Product {+sku: string +name: string}\n    class Inventory {+quantity: int}\n    Supplier \"1\" --> \"many\" Product\n    Product --> Inventory"
+  },
+  {
+    "prompt": "State diagram for a document: Draft, Review, Approved, Published, Archived.",
+    "diagram": "stateDiagram\n    Draft --> Review\n    Review --> Approved\n    Approved --> Published\n    Published --> Archived"
+  },
+  {
+    "prompt": "Flowchart showing ATM cash withdrawal: Validate card, enter PIN, check balance, dispense cash or deny.",
+    "diagram": "flowchart TD\n    A[Insert card] --> B[Enter PIN]\n    B --> C[Check balance]\n    C -->|Sufficient funds| D[Dispense cash]\n    C -->|Insufficient funds| E[Transaction denied]"
+  },
+  {
+    "prompt": "Class diagram for a University with Department, Professor, and Course. Departments employ professors and offer courses.",
+    "diagram": "classDiagram\n    class Department {+name: string}\n    class Professor {+id: int +name: string}\n    class Course {+code: string}\n    Department --> Professor\n    Department --> Course"
+  },
+  {
+    "prompt": "Sequence diagram of a password reset: User requests reset, system sends email, user clicks link, sets new password.",
+    "diagram": "sequenceDiagram\n    User ->> System: Request reset\n    System ->> EmailServer: Send reset email\n    EmailServer -->> User: Reset link\n    User ->> System: Set new password"
+  },
+  {
+    "prompt": "State diagram for a subscription product: Trial, Active, Suspended, Cancelled.",
+    "diagram": "stateDiagram\n    Trial --> Active\n    Active --> Suspended\n    Suspended --> Active\n    Active --> Cancelled"
+  },
+  {
+    "prompt": "Flowchart of authentication: Enter credentials, system validates, if valid allow access, else deny.",
+    "diagram": "flowchart TD\n    A[Enter credentials] --> B[Validate]\n    B -->|Valid| C[Access granted]\n    B -->|Invalid| D[Access denied]"
+  },
+  {
+    "prompt": "Class diagram for Blog, Post, Comment, and User. Users create posts and comments, posts contain comments.",
+    "diagram": "classDiagram\n    class User {+id: int +name: string}\n    class Post {+id: int +title: string}\n    class Comment {+id: int +content: string}\n    User \"1\" --> \"many\" Post\n    User \"1\" --> \"many\" Comment\n    Post \"1\" --> \"many\" Comment"
+  },
+  {
+    "prompt": "Sequence diagram where a smart home device reports temperature to a hub, which stores data in a database and triggers alerts if needed.",
+    "diagram": "sequenceDiagram\n    Device ->> Hub: Temperature report\n    Hub ->> Database: Store reading\n    Hub ->> AlertService: Trigger alert if threshold exceeded"
+  },
+  {
+    "prompt": "State diagram for a vehicle tracking sensor: Idle, Active, Sleeping, Error.",
+    "diagram": "stateDiagram\n    Idle --> Active\n    Active --> Sleeping\n    Sleeping --> Active\n    Active --> Error\n    Error --> Idle"
+  },
+  {
+    "prompt": "Flowchart for a job application: Submit application, HR screens, if pass schedule interview else reject.",
+    "diagram": "flowchart TD\n    A[Submit application] --> B[HR screen]\n    B -->|Pass| C[Schedule interview]\n    B -->|Fail| D[Rejected]"
+  },
+  {
+    "prompt": "Class diagram for a music streaming system with User, Playlist, Song, and Artist.",
+    "diagram": "classDiagram\n    class User {+id: int +name: string}\n    class Playlist {+playlistId: int}\n    class Song {+songId: int +title: string}\n    class Artist {+artistId: int +name: string}\n    User \"1\" --> \"many\" Playlist\n    Playlist \"many\" --> \"many\" Song\n    Artist \"1\" --> \"many\" Song"
+  },
+  {
+    "prompt": "Sequence diagram for an IoT sensor sending telemetry to a gateway which forwards it to cloud processing.",
+    "diagram": "sequenceDiagram\n    Sensor ->> Gateway: Telemetry\n    Gateway ->> Cloud: Forward readings\n    Cloud -->> Gateway: Ack\n    Gateway -->> Sensor: Ack"
+  },
+  {
+    "prompt": "State diagram for a manufacturing machine: Stopped, Starting, Running, Stopping, Error.",
+    "diagram": "stateDiagram\n    Stopped --> Starting\n    Starting --> Running\n    Running --> Stopping\n    Stopping --> Stopped\n    Running --> Error\n    Error --> Stopped"
+  },
+  {
+    "prompt": "Flowchart for printing a document: Choose printer, Check ink/paper, Print, Success or error.",
+    "diagram": "flowchart TD\n    A[Choose printer] --> B[Check ink & paper]\n    B -->|OK| C[Print]\n    C --> D[Printed successfully]\n    B -->|Error| E[Printer error]"
+  },
+  {
+    "prompt": "Class diagram for a gaming platform with Player, Game, Achievement, and Score.",
+    "diagram": "classDiagram\n    class Player {+id: int}\n    class Game {+gameId: int}\n    class Achievement {+title: string}\n    class Score {+points: int}\n    Player \"many\" --> \"many\" Game\n    Player \"many\" --> \"many\" Achievement\n    Player --> Score"
+  },
+  {
+    "prompt": "Sequence diagram where a cashier scans items, POS requests price lookup service, receives prices, calculates total, processes payment.",
+    "diagram": "sequenceDiagram\n    Cashier ->> POS: Scan item\n    POS ->> PricingService: Get price\n    PricingService -->> POS: Price\n    POS ->> PaymentProcessor: Process payment\n    PaymentProcessor -->> POS: Payment OK"
+  },
+  {
+    "prompt": "State diagram for a thermostat: Off, Heating, Cooling, Standby.",
+    "diagram": "stateDiagram\n    Off --> Heating\n    Off --> Cooling\n    Heating --> Standby\n    Cooling --> Standby\n    Standby --> Off"
+  },
+  {
+    "prompt": "Flowchart for ordering coffee at a café: Choose drink, choose size, barista prepares, serve.",
+    "diagram": "flowchart TD\n    A[Choose drink] --> B[Choose size]\n    B --> C[Barista prepares]\n    C --> D[Serve beverage]"
+  },
+  {
+    "prompt": "Class diagram of a video platform: Creator, Channel, Video, Subscriber.",
+    "diagram": "classDiagram\n    class Creator {+id: int}\n    class Channel {+name: string}\n    class Video {+id: int}\n    class Subscriber {+id: int}\n    Creator --> Channel\n    Channel \"1\" --> \"many\" Video\n    Subscriber \"many\" --> \"many\" Channel"
+  },
+  {
+    "prompt": "Sequence diagram for real-time chat: User sends message to server, server broadcasts to all connected users.",
+    "diagram": "sequenceDiagram\n    User ->> ChatServer: Send message\n    ChatServer ->> AllUsers: Broadcast message"
+  },
+  {
+    "prompt": "State diagram for a customer relationship: Prospect, Lead, ActiveCustomer, Dormant, Churned.",
+    "diagram": "stateDiagram\n    Prospect --> Lead\n    Lead --> ActiveCustomer\n    ActiveCustomer --> Dormant\n    Dormant --> ActiveCustomer\n    Dormant --> Churned"
+  },
+  {
+    "prompt": "Flowchart for upgrading software: Check for update, download, install, restart.",
+    "diagram": "flowchart TD\n    A[Check for update] --> B[Download update]\n    B --> C[Install]\n    C --> D[Restart]"
+  },
+  {
+    "prompt": "Class diagram for Customer, ShoppingCart, CartItem, and Product. Shoppers add products to a cart.",
+    "diagram": "classDiagram\n    class Customer {+id: int}\n    class ShoppingCart {}\n    class CartItem {+quantity: int}\n    class Product {+id: int +name: string}\n    Customer --> ShoppingCart\n    ShoppingCart --> CartItem\n    CartItem --> Product"
+  },
+  {
+    "prompt": "Sequence diagram where a web app retrieves user profile info from an authentication server and displays it.",
+    "diagram": "sequenceDiagram\n    WebApp ->> AuthServer: Request profile\n    AuthServer ->> Database: Get details\n    Database -->> AuthServer: User record\n    AuthServer -->> WebApp: Profile JSON"
+  },
+  {
+    "prompt": "State diagram of a parking gate: Closed, Opening, Open, Closing, Error.",
+    "diagram": "stateDiagram\n    Closed --> Opening\n    Opening --> Open\n    Open --> Closing\n    Closing --> Closed\n    Opening --> Error\n    Closing --> Error"
+  },
+  {
+    "prompt": "Flowchart for scheduling a meeting: Check calendar, propose time, confirm or retry.",
+    "diagram": "flowchart TD\n    A[Check calendar] --> B[Propose time]\n    B -->|Accepted| C[Meeting scheduled]\n    B -->|Declined| D[Retry]"
+  },
+  {
+    "prompt": "Class diagram for Airline, Flight, Passenger, and Ticket.",
+    "diagram": "classDiagram\n    class Airline {+name: string}\n    class Flight {+flightNo: string}\n    class Passenger {+id: int}\n    class Ticket {+seat: string}\n    Airline --> Flight\n    Passenger \"many\" --> \"many\" Flight : Ticket"
+  },
+  {
+    "prompt": "Sequence diagram for a purchase where system contacts shipping and billing services concurrently.",
+    "diagram": "sequenceDiagram\n    User ->> Shop: Place order\n    Shop ->> ShippingService: Arrange shipping\n    Shop ->> BillingService: Charge payment\n    ShippingService -->> Shop: Shipping confirmed\n    BillingService -->> Shop: Payment confirmed"
+  },
+  {
+    "prompt": "State diagram of a computer session: LoggedOut, LoggingIn, LoggedIn, Locked.",
+    "diagram": "stateDiagram\n    LoggedOut --> LoggingIn\n    LoggingIn --> LoggedIn\n    LoggedIn --> Locked\n    Locked --> LoggedIn\n    LoggedIn --> LoggedOut"
+  },
+  {
+    "prompt": "Flowchart for renewing a membership: User requests renewal, verify payment, activate or reject.",
+    "diagram": "flowchart TD\n    A[Request renewal] --> B[Verify payment]\n    B -->|Successful| C[Renewal activated]\n    B -->|Failed| D[Rejected]"
+  },
+  {
+    "prompt": "Class diagram for CRM with Contact, Company, Deal, and Activity.",
+    "diagram": "classDiagram\n    class Contact {+id: int}\n    class Company {+id: int}\n    class Deal {+value: float}\n    class Activity {+type: string}\n    Company --> Contact\n    Contact --> Deal\n    Contact --> Activity"
+  }
+]
+
+
+
+
