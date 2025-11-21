@@ -16,19 +16,19 @@ Training
 
 We used Supervised Fine-Tuning (SFT) with the TRL library:
 
-6 epochs
+- 6 epochs
 
-learning rate: 5e-5
+- learning rate: 5e-5
 
-batch size: 1
+- batch size: 1
 
-constant LR schedule
+- constant LR schedule
 
-AdamW fused optimizer
+- AdamW fused optimizer
 
-FP16/BF16 mixed precision (T4/T1000 GPUs)
+- FP16/BF16 mixed precision (T4/T1000 GPUs)
 
-Training and validation metrics were tracked in TensorBoard, and checkpoints were evaluated at each epoch.
+- Training and validation metrics were tracked in TensorBoard, and checkpoints were evaluated at each epoch.
 
 Usage
 
